@@ -11,7 +11,6 @@ import es.upm.dit.isst.electolab.model.Usuario;
 
 public class UsuarioDAOImplementation implements UsuarioDAO {
 
-	
 	  private static  UsuarioDAOImplementation instancia = null;
 	  private UsuarioDAOImplementation() {
 	  }
@@ -21,7 +20,7 @@ public class UsuarioDAOImplementation implements UsuarioDAO {
 	      instancia = new UsuarioDAOImplementation();
 	    return instancia;
 	  }
-
+	  
 	@SuppressWarnings("unchecked")
 	@Override
 	public void create(Usuario usuario) {
@@ -33,20 +32,20 @@ public class UsuarioDAOImplementation implements UsuarioDAO {
 		session.getTransaction().commit();
 		session.close();
 	}
-
+	  
 	@SuppressWarnings("unchecked")
 	@Override
-	public Usuario read(String email) {
+	public Usuario read(Integer id) {
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
 		
 		//Operaciones
-		Usuario usuario = session.get(Usuario.class, email);//Read
+		Usuario usuario = session.get(Usuario.class, id);//Read
 		session.getTransaction().commit();
 		session.close();
 		return usuario;
 	}
-
+	  
 	@SuppressWarnings("unchecked")
 	@Override
 	public void update(Usuario usuario) {
@@ -57,7 +56,7 @@ public class UsuarioDAOImplementation implements UsuarioDAO {
 		session.close();
 
 	}
-
+	  
 	@SuppressWarnings("unchecked")
 	@Override
 	public void delete(Usuario usuario) {
@@ -67,7 +66,7 @@ public class UsuarioDAOImplementation implements UsuarioDAO {
 		session.getTransaction().commit();
 		session.close();
 	}
-
+	  
 	@SuppressWarnings("unchecked")
 	@Override
 	public Collection<Usuario> readAll() {
@@ -78,18 +77,18 @@ public class UsuarioDAOImplementation implements UsuarioDAO {
 		session.close();
 		return usuarios;
 	}
-
+	  
 	@SuppressWarnings("unchecked")
 	@Override
-	public Usuario login(String email, String password) {
+	public Usuario login(String email, String psd) {
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
 		Usuario u = null;
 		Query q = session.createQuery("select u from Usuario u where u.email = :email and u.password = :password");
 		q.setParameter("email", email);
-		q.setParameter("password", password);
-		List<Usuario> profs = q.getResultList();
-		if (profs.size() > 0)
+		q.setParameter("password", psd);
+		List<Usuario> users = q.getResultList();
+		if (users.size() > 0)
 			u = (Usuario) (q.getResultList().get(0));
 		session.getTransaction().commit();
 		session.close();

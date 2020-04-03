@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.electolab.dao.AnalistaDAOImplementation;
 import es.upm.dit.isst.electolab.dao.PrediccionDAOImplementation;
+import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
 import es.upm.dit.isst.electolab.model.Analista;
 import es.upm.dit.isst.electolab.model.Prediccion;
+import es.upm.dit.isst.electolab.model.Usuario;
 
 /**
  * Servlet implementation class FormLoginServlet
@@ -43,17 +45,23 @@ public class FormLoginServlet extends HttpServlet {
 		boolean passwordsSame = (password1.compareTo(password2) == 0);
 		List<Analista> analistas = (List<Analista>) AnalistaDAOImplementation.getInstance().readAll();
 		List<Prediccion> predicciones = (List<Prediccion>) PrediccionDAOImplementation.getInstance().readAll();
+		List<Usuario> usuarios = (List<Usuario>) UsuarioDAOImplementation.getInstance().readAll();
 		Analista analista = AnalistaDAOImplementation.getInstance().login(email, password1);
-		if(passwordsSame && ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password1) ) {
+		Usuario usuario = UsuarioDAOImplementation.getInstance().login(email, password1);
+		if(passwordsSame && ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password1)) {
 			req.getSession().setAttribute("admin", true);
 			req.getSession().setAttribute("analistas", analistas);
 			req.getSession().setAttribute("predicciones", predicciones);
+			System.out.println("hola");
 			getServletContext().getRequestDispatcher("/Admin.jsp").forward(req,resp);
 		} else if ( null != analista ) {
-			req.getSession().setAttribute("analista", AnalistaDAOImplementation.getInstance().read(analista.getEmail()));
+			req.getSession().setAttribute("analista", AnalistaDAOImplementation.getInstance().read(analista.getId()));
 			getServletContext().getRequestDispatcher("/Analista.jsp").forward(req,resp);
+		} else if ( null != usuario ) {
+			req.getSession().setAttribute("usuario", UsuarioDAOImplementation.getInstance().read(usuario.getId()));
+			getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
 		} else {
-			getServletContext().getRequestDispatcher("/index.html").forward(req,resp);
+			getServletContext().getRequestDispatcher("/index.jsp").forward(req,resp);
 		}
 		}
 	}

@@ -36,34 +36,33 @@ public class AnalistaDAOImplementation implements AnalistaDAO {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public Analista read(String email) {
+	public Analista read(Integer id) {
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
 		
 		//Operaciones
-		Analista usuario = session.get(Analista.class, email);//Read
+		Analista analista = session.get(Analista.class, id);//Read
 		session.getTransaction().commit();
 		session.close();
-		return usuario;
+		return analista;
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public void update(Analista usuario) {
+	public void update(Analista analista) {
 		Session session = SessionFactoryService.get().openSession();
-		session.saveOrUpdate(usuario);
+		session.saveOrUpdate(analista);
 		session.beginTransaction();
 		session.getTransaction().commit();
 		session.close();
-
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public void delete(Analista usuario) {
+	public void delete(Analista analista) {
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
-		session.delete(usuario);
+		session.delete(analista);
 		session.getTransaction().commit();
 		session.close();
 	}

@@ -1,22 +1,30 @@
 package es.upm.dit.isst.electolab.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class Prediccion implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
 	private Integer id;
+	@Column
 	private int likes;
+	@Column
 	private int dislikes;
-	private String fecha;
+	@Column
+	private Date fecha;
 	@ManyToOne
 	private Analista analista;
 	public static long getSerialversionuid() {
@@ -31,7 +39,7 @@ public class Prediccion implements Serializable {
 	public int getDislikes() {
 		return dislikes;
 	}
-	public String getFecha() {
+	public Date getFecha() {
 		return fecha;
 	}
 	public Analista getAnalista() {
@@ -46,7 +54,7 @@ public class Prediccion implements Serializable {
 	public void setDislikes(int dislikes) {
 		this.dislikes = dislikes;
 	}
-	public void setFecha(String fecha) {
+	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 	public void setAnalista(Analista analista) {

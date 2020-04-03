@@ -9,6 +9,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Ley {
+	
+	//Variables de la ley
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
@@ -16,6 +18,9 @@ public class Ley {
 	private String nombre;
 	private Date fecha;
 	private String descripcion;
+	
+	
+	//Metodos de acceso
 	public Ley() {
 		super();
 	}
