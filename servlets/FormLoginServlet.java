@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import es.upm.dit.isst.electolab.dao.AnalistaDAOImplementation;
 import es.upm.dit.isst.electolab.dao.PrediccionDAOImplementation;
 import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
-import es.upm.dit.isst.electolab.model.Analista;
 import es.upm.dit.isst.electolab.model.Prediccion;
 import es.upm.dit.isst.electolab.model.Usuario;
 
@@ -35,34 +33,25 @@ public class FormLoginServlet extends HttpServlet {
 	private final String ADMIN_PASSWORD = "electolab";
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		boolean registerButtonPressed = (req.getParameter("registerButton") != null);
-		if ( registerButtonPressed ) {
-			getServletContext().getRequestDispatcher("/Register.jsp").forward(req,resp);
-		} else {
 		String email = req.getParameter("email");
-		String password1 = req.getParameter("password1");
-		String password2 = req.getParameter("password2");
-		boolean passwordsSame = (password1.compareTo(password2) == 0);
-		List<Analista> analistas = (List<Analista>) AnalistaDAOImplementation.getInstance().readAll();
+		String password = req.getParameter("password");
 		List<Prediccion> predicciones = (List<Prediccion>) PrediccionDAOImplementation.getInstance().readAll();
 		List<Usuario> usuarios = (List<Usuario>) UsuarioDAOImplementation.getInstance().readAll();
-		Analista analista = AnalistaDAOImplementation.getInstance().login(email, password1);
-		Usuario usuario = UsuarioDAOImplementation.getInstance().login(email, password1);
-		if(passwordsSame && ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password1)) {
+		Usuario usuario = UsuarioDAOImplementation.getInstance().login(email, password);
+		if(ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password)) {
 			req.getSession().setAttribute("admin", true);
-			req.getSession().setAttribute("analistas", analistas);
+			req.getSession().setAttribute("usuarios", usuarios);
 			req.getSession().setAttribute("predicciones", predicciones);
-			System.out.println("hola");
 			getServletContext().getRequestDispatcher("/Admin.jsp").forward(req,resp);
-		} else if ( null != analista ) {
-			req.getSession().setAttribute("analista", AnalistaDAOImplementation.getInstance().read(analista.getId()));
-			getServletContext().getRequestDispatcher("/Analista.jsp").forward(req,resp);
-		} else if ( null != usuario ) {
+		}else if ( null != usuario ) {
 			req.getSession().setAttribute("usuario", UsuarioDAOImplementation.getInstance().read(usuario.getId()));
-			getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
+			if(usuario.getAccepted() && usuario.getAnalist()) {
+				getServletContext().getRequestDispatcher("/Analista.jsp").forward(req,resp);
+			} else {
+				getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
+			}
 		} else {
 			getServletContext().getRequestDispatcher("/index.jsp").forward(req,resp);
-		}
 		}
 	}
 

@@ -26,7 +26,7 @@ public class Prediccion implements Serializable {
 	@Column
 	private Date fecha;
 	@ManyToOne
-	private Analista analista;
+	private Usuario analista;
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -42,7 +42,7 @@ public class Prediccion implements Serializable {
 	public Date getFecha() {
 		return fecha;
 	}
-	public Analista getAnalista() {
+	public Usuario getAnalista() {
 		return analista;
 	}
 	public void setId(Integer id) {
@@ -57,7 +57,7 @@ public class Prediccion implements Serializable {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public void setAnalista(Analista analista) {
+	public void setAnalista(Usuario analista) {
 		this.analista = analista;
 	}
 	@Override

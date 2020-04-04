@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import es.upm.dit.isst.electolab.dao.AnalistaDAOImplementation;
 import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
-import es.upm.dit.isst.electolab.model.Analista;
 import es.upm.dit.isst.electolab.model.Usuario;
 
 
@@ -34,24 +32,28 @@ public class FormRegisterServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String email = req.getParameter("email");
 		//Aqui falta comprobar que la contraseña coincide
-		String password = req.getParameter("password1");
+		String password1 = req.getParameter("password1");
+		String password2 = req.getParameter("password2");
+		boolean passwordsSame = (password1.compareTo(password2) == 0);
+		if(passwordsSame){
 		String username = req.getParameter("username");
-		if(req.getParameter("analistcheck") != null) {
-		Analista analista = new Analista();
-		analista.setEmail(email);
-		analista.setPassword(password);
-		analista.setName(username);
-		AnalistaDAOImplementation.getInstance().create(analista);
-		req.getSession().setAttribute("analista", analista);
-		} else {
 		Usuario usuario = new Usuario();
 		usuario.setEmail(email);
-		usuario.setPassword(password);
+		usuario.setPassword(password1);
 		usuario.setName(username);
+		if(req.getParameter("analistcheck") != null) {
+		usuario.setAnalist(true);
+		usuario.setAccepted(false);
+		} else {
+			usuario.setAnalist(false);
+			usuario.setAccepted(true);
+		}
 		UsuarioDAOImplementation.getInstance().create(usuario);
 		req.getSession().setAttribute("usuario", usuario);
-		}
 		getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+		} else {
+			getServletContext().getRequestDispatcher("/Register.jsp").forward(req, resp);
+		}
 	}
 
 }
