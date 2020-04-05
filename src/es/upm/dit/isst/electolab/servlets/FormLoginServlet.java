@@ -45,11 +45,7 @@ public class FormLoginServlet extends HttpServlet {
 			getServletContext().getRequestDispatcher("/Admin.jsp").forward(req,resp);
 		}else if ( null != usuario ) {
 			req.getSession().setAttribute("usuario", UsuarioDAOImplementation.getInstance().read(usuario.getId()));
-			if(usuario.getAccepted() && usuario.getAnalist()) {
-				getServletContext().getRequestDispatcher("/Analista.jsp").forward(req,resp);
-			} else {
-				getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
-			}
+			getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
 		} else {
 			getServletContext().getRequestDispatcher("/index.jsp").forward(req,resp);
 		}

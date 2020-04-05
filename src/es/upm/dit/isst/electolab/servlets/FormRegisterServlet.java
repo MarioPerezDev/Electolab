@@ -47,9 +47,15 @@ public class FormRegisterServlet extends HttpServlet {
 		} else {
 			usuario.setAnalist(false);
 			usuario.setAccepted(true);
-		}
+		}try {
 		UsuarioDAOImplementation.getInstance().create(usuario);
 		req.getSession().setAttribute("usuario", usuario);
+		req.getSession().removeAttribute("mensaje");
+		} catch (Exception existing) {
+			String mensaje = "Ese nombre de usuario o correo electrónico ya existe.";
+			req.getSession().setAttribute("mensaje", mensaje);
+			getServletContext().getRequestDispatcher("/Register.jsp").forward(req, resp);
+		}
 		getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
 		} else {
 			getServletContext().getRequestDispatcher("/Register.jsp").forward(req, resp);
