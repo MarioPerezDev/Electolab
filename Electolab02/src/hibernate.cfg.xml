@@ -16,5 +16,8 @@
 		<property name="hbm2ddl.auto">update</property>
 		<mapping class="es.upm.dit.isst.electolab.model.Prediccion" />
 		<mapping class="es.upm.dit.isst.electolab.model.Usuario" />
+		<mapping class="es.upm.dit.isst.electolab.model.Diputado" />
+		<mapping class="es.upm.dit.isst.electolab.model.GrupoParlamentario" />
+		<mapping class="es.upm.dit.isst.electolab.model.Partido" />
 	</session-factory>
 </hibernate-configuration>

@@ -1,22 +1,32 @@
 package es.upm.dit.isst.electolab.model;
 
-import java.util.Collection;
-
-import javax.persistence.FetchType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-public class GrupoParlamentario {
+@Entity
+@Table
+public class Diputado {
 	
+	//Variables que tendrá diputado
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
 	private Integer id;
+	@Column
 	private String nombre;
+	@Column
+	private String apellido1;
+	@Column
+	private String apellido2;
+	@Column
 	private String voto;
-	@OneToMany(mappedBy = "grupoparlamentario", fetch = FetchType.EAGER)
-	private Collection<GrupoParlamentario> partidosdelgrupo;
+	@ManyToOne
+	private Partido partido;
 	public Integer getId() {
 		return id;
 	}
@@ -29,24 +39,35 @@ public class GrupoParlamentario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	public String getApellido1() {
+		return apellido1;
+	}
+	public void setApellido1(String apellido1) {
+		this.apellido1 = apellido1;
+	}
+	public String getApellido2() {
+		return apellido2;
+	}
+	public void setApellido2(String apellido2) {
+		this.apellido2 = apellido2;
+	}
 	public String getVoto() {
 		return voto;
 	}
 	public void setVoto(String voto) {
 		this.voto = voto;
 	}
-	public Collection<GrupoParlamentario> getPartidosdelgrupo() {
-		return partidosdelgrupo;
+	public Partido getPartido() {
+		return partido;
 	}
-	public void setPartidosdelgrupo(Collection<GrupoParlamentario> partidosdelgrupo) {
-		this.partidosdelgrupo = partidosdelgrupo;
+	public void setPartido(Partido partido) {
+		this.partido = partido;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
 	@Override
@@ -57,26 +78,21 @@ public class GrupoParlamentario {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		GrupoParlamentario other = (GrupoParlamentario) obj;
+		Diputado other = (Diputado) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "GrupoParlamentario [id=" + id + ", nombre=" + nombre + ", voto=" + voto + ", partidosdelgrupo="
-				+ partidosdelgrupo + "]";
+		return "Diputado [id=" + id + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2
+				+ ", voto=" + voto + ", partido=" + partido + "]";
 	}
-	public GrupoParlamentario() {
+	public Diputado() {
 		super();
-	}
+	}	
 	
 }

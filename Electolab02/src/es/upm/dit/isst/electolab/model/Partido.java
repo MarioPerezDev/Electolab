@@ -1,24 +1,36 @@
 package es.upm.dit.isst.electolab.model;
 
+import java.util.Collection;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
-public class Diputado {
-	
-	//Variables que tendrá diputado
+@Table
+public class Partido {
+	//Variables que tiene un partido
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
 	private Integer id;
+	@Column
 	private String nombre;
-	private String apellido1;
-	private String apellido2;
+	@Column
+	private String descripcion;
+	@Column
 	private String voto;
+	@Column
+	@OneToMany(mappedBy = "partido", fetch = FetchType.EAGER)
+	private Collection<Diputado> diputados;	
 	@ManyToOne
-	private String partido;
+	private GrupoParlamentario grupoParlamentario;
 	public Integer getId() {
 		return id;
 	}
@@ -31,17 +43,11 @@ public class Diputado {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getApellido1() {
-		return apellido1;
+	public String getDescripcion() {
+		return descripcion;
 	}
-	public void setApellido1(String apellido1) {
-		this.apellido1 = apellido1;
-	}
-	public String getApellido2() {
-		return apellido2;
-	}
-	public void setApellido2(String apellido2) {
-		this.apellido2 = apellido2;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	public String getVoto() {
 		return voto;
@@ -49,11 +55,18 @@ public class Diputado {
 	public void setVoto(String voto) {
 		this.voto = voto;
 	}
-	public String getPartido() {
-		return partido;
+	public Collection<Diputado> getDiputados() {
+		return diputados;
 	}
-	public void setPartido(String partido) {
-		this.partido = partido;
+	public void setDiputados(Collection<Diputado> diputados) {
+		this.diputados = diputados;
+	}
+
+	public GrupoParlamentario getGrupoParlamentario() {
+		return grupoParlamentario;
+	}
+	public void setGrupoParlamentario(GrupoParlamentario grupoParlamentario) {
+		this.grupoParlamentario = grupoParlamentario;
 	}
 	@Override
 	public int hashCode() {
@@ -70,7 +83,7 @@ public class Diputado {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Diputado other = (Diputado) obj;
+		Partido other = (Partido) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -80,13 +93,11 @@ public class Diputado {
 	}
 	@Override
 	public String toString() {
-		return "Diputado [id=" + id + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2
-				+ ", voto=" + voto + ", partido=" + partido + "]";
+		return "Partido [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", voto=" + voto
+				+ ", diputados=" + diputados + ", grupoParlamentario=" + grupoParlamentario + "]";
 	}
-	public Diputado() {
+	public Partido() {
 		super();
 	}
-	
-	//Métodos de acceso y modificación
 	
 }
