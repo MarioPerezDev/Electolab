@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import es.upm.dit.isst.electolab.dao.DiputadoDAOImplementation;
 import es.upm.dit.isst.electolab.dao.PrediccionDAOImplementation;
 import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
+import es.upm.dit.isst.electolab.model.Diputado;
 import es.upm.dit.isst.electolab.model.Prediccion;
 import es.upm.dit.isst.electolab.model.Usuario;
 
@@ -37,11 +39,13 @@ public class FormLoginServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		List<Prediccion> predicciones = (List<Prediccion>) PrediccionDAOImplementation.getInstance().readAll();
 		List<Usuario> usuarios = (List<Usuario>) UsuarioDAOImplementation.getInstance().readAll();
+		
 		Usuario usuario = UsuarioDAOImplementation.getInstance().login(email, password);
+		req.getSession().setAttribute("usuarios", usuarios);
+		req.getSession().setAttribute("predicciones", predicciones);
+		
 		if(ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password)) {
 			req.getSession().setAttribute("admin", true);
-			req.getSession().setAttribute("usuarios", usuarios);
-			req.getSession().setAttribute("predicciones", predicciones);
 			getServletContext().getRequestDispatcher("/Admin.jsp").forward(req,resp);
 		}else if ( null != usuario ) {
 			req.getSession().setAttribute("usuario", UsuarioDAOImplementation.getInstance().read(usuario.getId()));

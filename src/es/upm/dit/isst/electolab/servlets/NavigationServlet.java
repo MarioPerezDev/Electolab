@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import es.upm.dit.isst.electolab.dao.DiputadoDAOImplementation;
 import es.upm.dit.isst.electolab.dao.PrediccionDAOImplementation;
 import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
+import es.upm.dit.isst.electolab.model.Diputado;
 import es.upm.dit.isst.electolab.model.Prediccion;
 import es.upm.dit.isst.electolab.model.Usuario;
 
@@ -33,6 +35,10 @@ public class NavigationServlet extends HttpServlet {
 		req.getSession().removeAttribute("mensaje");
 		String active = req.getParameter("infoLink");
 		req.getSession().setAttribute("active", active);
+		if(req.getSession().getAttribute("diputados") == null) {
+			List<Diputado> diputados = (List<Diputado>) DiputadoDAOImplementation.getInstance().readAll();
+			req.getSession().setAttribute("diputados", diputados);
+		}
 		getServletContext().getRequestDispatcher("/"+active+".jsp").forward(req,resp);
 	}
 }

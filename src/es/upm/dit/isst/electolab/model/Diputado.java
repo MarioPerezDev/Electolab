@@ -11,7 +11,8 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class Diputado {
-	
+	//INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO)
+	//VALUES ('2', 'CASADO', 'CASTEJÓN', 'PABLO', 'CONTRA')
 	//Variables que tendrá diputado
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

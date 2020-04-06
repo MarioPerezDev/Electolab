@@ -36,27 +36,27 @@ public class FormRegisterServlet extends HttpServlet {
 		String password2 = req.getParameter("password2");
 		boolean passwordsSame = (password1.compareTo(password2) == 0);
 		if(passwordsSame){
-		String username = req.getParameter("username");
-		Usuario usuario = new Usuario();
-		usuario.setEmail(email);
-		usuario.setPassword(password1);
-		usuario.setName(username);
-		if(req.getParameter("analistcheck") != null) {
-		usuario.setAnalist(true);
-		usuario.setAccepted(false);
-		} else {
-			usuario.setAnalist(false);
-			usuario.setAccepted(true);
-		}try {
-		UsuarioDAOImplementation.getInstance().create(usuario);
-		req.getSession().setAttribute("usuario", usuario);
-		req.getSession().removeAttribute("mensaje");
-		} catch (Exception existing) {
-			String mensaje = "Ese nombre de usuario o correo electrónico ya existe.";
-			req.getSession().setAttribute("mensaje", mensaje);
-			getServletContext().getRequestDispatcher("/Register.jsp").forward(req, resp);
-		}
-		getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+			String username = req.getParameter("username");
+			Usuario usuario = new Usuario();
+			usuario.setEmail(email);
+			usuario.setPassword(password1);
+			usuario.setName(username);
+			if(req.getParameter("analistcheck") != null) {
+				usuario.setAnalist(true);
+				usuario.setAccepted(false);
+			} else {
+				usuario.setAnalist(false);
+				usuario.setAccepted(true);
+			}try {
+				UsuarioDAOImplementation.getInstance().create(usuario);
+				req.getSession().setAttribute("usuario", usuario);
+				req.getSession().removeAttribute("mensaje");
+			} catch (Exception existing) {
+				String mensaje = "Ese nombre de usuario o correo electrónico ya existe.";
+				req.getSession().setAttribute("mensaje", mensaje);
+				getServletContext().getRequestDispatcher("/Register.jsp").forward(req, resp);
+			}
+			getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
 		} else {
 			getServletContext().getRequestDispatcher("/Register.jsp").forward(req, resp);
 		}

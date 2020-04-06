@@ -7,7 +7,13 @@
 <%@ include file = "Head.jsp" %>
 <body>
  	<%@ include file = "Navbar.jsp" %>
+ 	<div class="container"> 
 		<h1>Esta será la página de ${active}.</h1>
+		<c:forEach items="${diputados}" var="diputadoi">
+			${diputadoi.nombre}
+
+		</c:forEach>
+	</div>
 	<%@ include file = "Variables.jsp" %>
 </body>
 </html>
