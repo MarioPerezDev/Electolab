@@ -7,6 +7,7 @@
 <%@ include file = "Head.jsp" %>
 <body>
    <%@ include file = "Navbar.jsp" %>
+   <div class="container">
 	<h1>Esta será la página para un admin.</h1>
 	<h2>Analistas pendientes de confirmación</h2>
 		<c:forEach items="${usuarios}" var="usuarioi">
@@ -20,13 +21,14 @@
 					<td>				
 						<form action="AcceptAnalistServlet">
 							<input type="hidden" name="userid" value="${usuarioi.id}" />
-							<button type="submit">Aceptar analista</button>
+							<button type="submit" class="btn btn-outline-dark btn-sm">Aceptar analista</button>
 						</form>
 					</td>
 				</tr>
 			</table>
 		</c:if>
 		</c:forEach>
+		</div>
 	<%@ include file = "Variables.jsp" %>
 </body>
 </html>

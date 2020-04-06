@@ -18,7 +18,7 @@
 		<ul class="navbar-nav mr-auto">
 			<c:choose>
 				<c:when test="${ active == 'Info'}">
-					<li class="nav-item active" id="infoLink">
+					<li class="nav-item active activo" id="infoLink">
 				</c:when>
 				<c:otherwise>
 					<li class="nav-item" id="infoLink">
@@ -28,7 +28,7 @@
 			</li>
 			<c:choose>
 				<c:when test="${ active == 'Predicciones'}">
-					<li class="nav-item active" id="predictionsLink">
+					<li class="nav-item active activo" id="predictionsLink">
 				</c:when>
 				<c:otherwise>
 					<li class="nav-item" id="predictionsLink">
@@ -38,7 +38,7 @@
 			</li>
 			<c:choose>
 				<c:when test="${ active == 'AboutUs'}">
-					<li class="nav-item active" id="aboutUsLink">
+					<li class="nav-item active activo" id="aboutUsLink">
 				</c:when>
 				<c:otherwise>
 					<li class="nav-item" id="aboutUsLink">
@@ -49,7 +49,7 @@
 			</li>
 			<li class="nav-item" id="helpLink"><c:choose>
 					<c:when test="${ active == 'Help'}">
-						<li class="nav-item active" id="helpLink">
+						<li class="nav-item active activo" id="helpLink">
 					</c:when>
 					<c:otherwise>
 						<li class="nav-item" id="helpLink">
@@ -64,7 +64,7 @@
 				</form>
 			</c:when>
 			<c:when test="${ null != admin}">
-				<div id="texto" class="usernameText">Hola Admin</div>
+				<a href="NavigationServlet?infoLink=Admin" id="texto" class="usernameText">Admin</a>
 				<form action="LogoutServlet">
 					<button type="submit" class="btn btn-outline-light btn-sm">Salir</button>
 				</form>

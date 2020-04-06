@@ -22,7 +22,7 @@ public class Partido {
 	private Integer id;
 	@Column
 	private String nombre;
-	@Column
+	@Column(length=2000)
 	private String descripcion;
 	@Column
 	private String voto;

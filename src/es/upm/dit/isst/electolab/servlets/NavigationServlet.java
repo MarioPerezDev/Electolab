@@ -10,11 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.electolab.dao.DiputadoDAOImplementation;
-import es.upm.dit.isst.electolab.dao.PrediccionDAOImplementation;
-import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
+import es.upm.dit.isst.electolab.dao.GrupoParlamentarioDAOImplementation;
 import es.upm.dit.isst.electolab.model.Diputado;
-import es.upm.dit.isst.electolab.model.Prediccion;
-import es.upm.dit.isst.electolab.model.Usuario;
+import es.upm.dit.isst.electolab.model.GrupoParlamentario;
 
 /**
  * Servlet implementation class NavigationServlet
@@ -22,14 +20,14 @@ import es.upm.dit.isst.electolab.model.Usuario;
 @WebServlet("/NavigationServlet")
 public class NavigationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public NavigationServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public NavigationServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getSession().removeAttribute("mensaje");
@@ -38,6 +36,10 @@ public class NavigationServlet extends HttpServlet {
 		if(req.getSession().getAttribute("diputados") == null) {
 			List<Diputado> diputados = (List<Diputado>) DiputadoDAOImplementation.getInstance().readAll();
 			req.getSession().setAttribute("diputados", diputados);
+		}
+		if(req.getSession().getAttribute("gruposparlamentarios") == null) {
+			List<GrupoParlamentario> gruposparlamentarios = (List<GrupoParlamentario>) GrupoParlamentarioDAOImplementation.getInstance().readAll();
+			req.getSession().setAttribute("gruposparlamentarios", gruposparlamentarios);
 		}
 		getServletContext().getRequestDispatcher("/"+active+".jsp").forward(req,resp);
 	}

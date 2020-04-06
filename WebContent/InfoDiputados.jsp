@@ -1,4 +1,5 @@
 <c:forEach items="${diputados}" var="diputadoi">
+		<div class="pruebagonzalo">
 			${diputadoi.nombre}
-
-		</c:forEach>
+	</div>	
+	</c:forEach>
