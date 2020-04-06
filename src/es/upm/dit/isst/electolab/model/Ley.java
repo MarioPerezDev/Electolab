@@ -2,6 +2,7 @@ package es.upm.dit.isst.electolab.model;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,10 +14,15 @@ public class Ley {
 	//Variables de la ley
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
 	private Integer id;
+	@Column
 	private String resultado;
+	@Column
 	private String nombre;
+	@Column
 	private Date fecha;
+	@Column
 	private String descripcion;
 	
 	
