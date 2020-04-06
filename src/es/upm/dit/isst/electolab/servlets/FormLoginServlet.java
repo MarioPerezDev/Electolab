@@ -46,11 +46,15 @@ public class FormLoginServlet extends HttpServlet {
 		
 		if(ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password)) {
 			req.getSession().setAttribute("admin", true);
+			req.getSession().setAttribute("active", "admin");
 			getServletContext().getRequestDispatcher("/Admin.jsp").forward(req,resp);
 		}else if ( null != usuario ) {
 			req.getSession().setAttribute("usuario", UsuarioDAOImplementation.getInstance().read(usuario.getId()));
+			req.getSession().setAttribute("active", "user");
 			getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
 		} else {
+			req.getSession().setAttribute("active", "index");
+			req.getSession().setAttribute("mensaje", "El correo electrónico o la contraseña son incorrectas.");
 			getServletContext().getRequestDispatcher("/index.jsp").forward(req,resp);
 		}
 	}

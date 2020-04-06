@@ -33,6 +33,10 @@ a:hover {
 	margin: 3px;
 	margin-left: 0px;
 }
-.pruebagonzalo{
-	color: red;
+.activo{
+	background-color: #30353A;
+	border-radius: 5px;
+}
+.activo a{
+	color: #ff6600 !important;
 }

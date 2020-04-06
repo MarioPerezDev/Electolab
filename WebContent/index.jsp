@@ -8,6 +8,10 @@
     
     <!-- Cuerpo de la página -->
     <div class="container">
+   		<c:if test="${mensaje != null}">
+			<div class="alert alert-danger" role="alert">
+			${mensaje}</div>
+		</c:if>
       <div class="row">
         <div class="col-12 col-md-6 text-center">
           <h1>Hello, INDEX!</h1>
