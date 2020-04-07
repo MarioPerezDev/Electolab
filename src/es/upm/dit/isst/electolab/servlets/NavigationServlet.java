@@ -10,9 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.electolab.dao.DiputadoDAOImplementation;
-import es.upm.dit.isst.electolab.dao.GrupoParlamentarioDAOImplementation;
+import es.upm.dit.isst.electolab.dao.PartidoDAOImplementation;
 import es.upm.dit.isst.electolab.model.Diputado;
 import es.upm.dit.isst.electolab.model.GrupoParlamentario;
+import es.upm.dit.isst.electolab.model.Partido;
 
 /**
  * Servlet implementation class NavigationServlet
@@ -37,9 +38,9 @@ public class NavigationServlet extends HttpServlet {
 			List<Diputado> diputados = (List<Diputado>) DiputadoDAOImplementation.getInstance().readAll();
 			req.getSession().setAttribute("diputados", diputados);
 		}
-		if(req.getSession().getAttribute("gruposparlamentarios") == null) {
-			List<GrupoParlamentario> gruposparlamentarios = (List<GrupoParlamentario>) GrupoParlamentarioDAOImplementation.getInstance().readAll();
-			req.getSession().setAttribute("gruposparlamentarios", gruposparlamentarios);
+		if(req.getSession().getAttribute("partidos") == null) {
+			List<Partido> partidos = (List<Partido>) PartidoDAOImplementation.getInstance().readAll();
+			req.getSession().setAttribute("partidos", partidos);
 		}
 		getServletContext().getRequestDispatcher("/"+active+".jsp").forward(req,resp);
 	}
