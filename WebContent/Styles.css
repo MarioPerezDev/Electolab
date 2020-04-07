@@ -40,3 +40,11 @@ a:hover {
 .activo a{
 	color: #ff6600 !important;
 }
+
+.columna1{
+	background-color: red;
+}
+
+.columna2{
+	background-color: green;
+}

@@ -9,6 +9,7 @@
 	<%@ include file="Navbar.jsp"%>
 	<div class="container">
 		<h1>Esta será la página de Predicciones.</h1>
+		Pruebaca
 		<c:choose>
 			<c:when test="${usuario != null}">
 				<div class="row">
