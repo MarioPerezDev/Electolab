@@ -107,7 +107,7 @@
 					</div>
 			</div>
 			<div class="modal-footer">
-				¿No tienes cuenta? Haz click <a href="Register.jsp"
+				¿No tienes cuenta? Haz click <a href="NavigationServlet?infoLink=Register"
 					name="registerButton">Registrarse</a> <input type="submit"
 					value="Login" name="loginButton" class="btn btn-outline-light btn-sm">
 			</div>
