@@ -10,6 +10,8 @@
  	<div class="container"> 
 		<h1>Esta será la página de Información.</h1>
 		
+		Esto es una prueba de las que le gustan a mario.
+		
 	<%@ include file = "InfoDiputados.jsp" %>
 	</div>
 	<%@ include file = "Variables.jsp" %>
