@@ -10,9 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.electolab.dao.DiputadoDAOImplementation;
+import es.upm.dit.isst.electolab.dao.LeyDAOImplementation;
 import es.upm.dit.isst.electolab.dao.PartidoDAOImplementation;
 import es.upm.dit.isst.electolab.model.Diputado;
-import es.upm.dit.isst.electolab.model.GrupoParlamentario;
+import es.upm.dit.isst.electolab.model.Ley;
 import es.upm.dit.isst.electolab.model.Partido;
 
 /**
@@ -41,6 +42,10 @@ public class NavigationServlet extends HttpServlet {
 		if(req.getSession().getAttribute("partidos") == null) {
 			List<Partido> partidos = (List<Partido>) PartidoDAOImplementation.getInstance().readAll();
 			req.getSession().setAttribute("partidos", partidos);
+		}
+		if(req.getSession().getAttribute("leyes") == null) {
+			List<Ley> leyes = (List<Ley>) LeyDAOImplementation.getInstance().readAll();
+			req.getSession().setAttribute("leyes", leyes);
 		}
 		getServletContext().getRequestDispatcher("/"+active+".jsp").forward(req,resp);
 	}

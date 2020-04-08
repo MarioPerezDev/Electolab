@@ -19,11 +19,22 @@
 
 			<div class="col-6">
 				<c:forEach items="${partidos}" var="partidoi">
-					<div class="pruebagonzalo">
+					<div>
 						${partidoi.nombre}
 						<form class="form-inline my-2 my-lg-0"
 							action="InfoPartidosServlet">
-							<button type="submit" class="btn btn-outline-dark">Entrar</button>
+							<button type="submit" class="btn btn-outline-dark">Información</button>
+						</form>
+					</div>
+				</c:forEach>
+			</div>
+			<div class="col-6">
+				<c:forEach items="${leyes}" var="leyi">
+					<div>
+						${leyi.nombre}
+						<form class="form-inline my-2 my-lg-0"
+							action="InfoLeyesServlet" >
+							<button type="submit" class="btn btn-outline-dark">Información</button>
 						</form>
 					</div>
 				</c:forEach>

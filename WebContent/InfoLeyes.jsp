@@ -22,15 +22,15 @@
 		<div class="row">
 			<div class="col-6">
 				<img width="500" height="300"
-					src="https://image.shutterstock.com/image-photo/raising-hands-participation-600w-676447282.jpg">
+					src="https://image.shutterstock.com/image-photo/law-600w-307415057.jpg">
 			</div>
 			<div class="col-6">
 
-				<h2>Información de ${partidoi.nombre}</h2>
+				<h2>Información de ${leyi.nombre}</h2>
 
 			</div>
 
 		</div>
 
-		Aquí iria la descripción del partido ${partidoi.descripción}
+		Aquí iria la descripción de la ley ${leyi.descripción}
 </body>
