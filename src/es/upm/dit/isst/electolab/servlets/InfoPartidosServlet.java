@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import es.upm.dit.isst.electolab.dao.PartidoDAOImplementation;
 import es.upm.dit.isst.electolab.model.Partido;
 
-/**
- * Servlet implementation class InfoPartidosServlet
- */
 @WebServlet("/InfoPartidosServlet")
 public class InfoPartidosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,11 +28,12 @@ public class InfoPartidosServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String partidoActivo = req.getParameter("partidoLink");
-		req.getSession().setAttribute("partidoActivo", partidoActivo);
-		/**
-		 * ArribaQuiero hacer como navbar, que en del partido seleccionado, saque partidoi.nombre, partidoi.descripción....
-		 */
+
+		Integer partidoActivo = Integer.parseInt(req.getParameter("infoPartido"));
+		System.out.println(partidoActivo);
+		Partido partido = PartidoDAOImplementation.getInstance().read(partidoActivo);
+		req.getSession().setAttribute("partido", partido);
+
 		getServletContext().getRequestDispatcher("/InfoPartidos.jsp").forward(req,resp);
 
 	}

@@ -23,7 +23,9 @@
 						${partidoi.nombre}
 						<form class="form-inline my-2 my-lg-0"
 							action="InfoPartidosServlet">
-							<button type="submit" class="btn btn-outline-dark">Información</button>
+							<input type="hidden" name="infoPartido" value="${partidoi.id}" />
+							<button type="submit" name="button${partidoi.id}" class="btn btn-outline-dark">Información</button>
+					
 						</form>
 					</div>
 				</c:forEach>

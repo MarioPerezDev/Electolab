@@ -9,15 +9,6 @@
 <body>
 	<%@ include file="Navbar.jsp"%>
 
-	<c:choose>
-		<c:when test="${ partidoActivo == 'PSOE'}">
-			<li class="nav-item active activo" id="partidoLink">
-		</c:when>
-		<c:otherwise>
-			<li class="nav-item" id="partidoLink">
-		</c:otherwise>
-	</c:choose>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-6">
@@ -26,11 +17,13 @@
 			</div>
 			<div class="col-6">
 
-				<h2>Información de ${partidoi.nombre}</h2>
+				<h2>Información de ${partido.nombre}</h2>
 
 			</div>
 
 		</div>
 
-		Aquí iria la descripción del partido ${partidoi.descripción}
+
+		Aquí iria la descripción del partido ${partido.descripcion}
+	</div>
 </body>
