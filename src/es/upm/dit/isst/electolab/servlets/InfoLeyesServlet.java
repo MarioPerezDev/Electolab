@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import es.upm.dit.isst.electolab.dao.LeyDAOImplementation;
-import es.upm.dit.isst.electolab.model.Ley;
+import es.upm.dit.isst.electolab.dao.PartidoDAOImplementation;
+import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
+import es.upm.dit.isst.electolab.model.Partido;
+import es.upm.dit.isst.electolab.model.Usuario;
 
 /**
  * Servlet implementation class InfoLeyesServlet
@@ -30,12 +32,10 @@ public class InfoLeyesServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		Integer leyActiva = Integer.parseInt(req.getParameter("infoLey"));
-		Ley ley = LeyDAOImplementation.getInstance().read(leyActiva);
-		req.getSession().setAttribute("ley", ley);
-
+		Integer id = Integer.parseInt(req.getParameter("partidoButton"));
+		Partido partido = PartidoDAOImplementation.getInstance().read(id);
+		
 		getServletContext().getRequestDispatcher("/InfoLeyes.jsp").forward(req,resp);
-
 	}
 
 	/**
