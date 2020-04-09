@@ -14,8 +14,12 @@
 				<div class="col-12">Seleccione la información a la que quiere
 					acceder</div>
 			</h2>
-			<div class="col-6"><h3>Partidos Políticos</h3></div>
-			<div class="col-6"><h3>Leyes Pasadas</div>
+			<div class="col-6">
+				<h3>Partidos Políticos</h3>
+			</div>
+			<div class="col-6">
+				<h3>Leyes Pasadas
+			</div>
 
 			<div class="col-6">
 				<c:forEach items="${partidos}" var="partidoi">
@@ -24,8 +28,9 @@
 						<form class="form-inline my-2 my-lg-0"
 							action="InfoPartidosServlet">
 							<input type="hidden" name="infoPartido" value="${partidoi.id}" />
-							<button type="submit" name="button${partidoi.id}" class="btn btn-outline-dark">Información</button>
-					
+							<button type="submit" name="button${partidoi.id}"
+								class="btn btn-outline-dark">Información</button>
+
 						</form>
 					</div>
 				</c:forEach>
@@ -34,9 +39,10 @@
 				<c:forEach items="${leyes}" var="leyi">
 					<div>
 						${leyi.nombre}
-						<form class="form-inline my-2 my-lg-0"
-							action="InfoLeyesServlet" >
-							<button type="submit" class="btn btn-outline-dark">Información</button>
+						<form class="form-inline my-2 my-lg-0" action="InfoLeyesServlet">
+							<input type="hidden" name="infoLey" value="${leyi.id}" />
+							<button type="submit" name="${leyi.id}"
+							class="btn btn-outline-dark">Información</button>
 						</form>
 					</div>
 				</c:forEach>

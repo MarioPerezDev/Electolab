@@ -17,7 +17,8 @@
 			</div>
 			<div class="col-6">
 
-				<h2>Información de ${partido.nombre}</h2>
+				<h2>Información de ${partido.nombre} (SIGLAS Y NOMBRE)</h2>
+				<P>	PONER NUEVO ATRIBUTO DE PARTIDO QUE SEA "SIGLAS" Y OTRO "NOMBRE" AQUI MOSTRAMOS NOMBRE COMPLETO Y SIGLAS</P>
 
 			</div>
 
@@ -25,5 +26,6 @@
 
 
 		Aquí iria la descripción del partido ${partido.descripcion}
+<P>		PONER NUEVO ATRIBUTO DE PARTIDO QUE SEA "FOTO" O ALGO ASÍ. lA IMAGEN QUE SE MUESTRE SEA SACADA DE LA BBDD.</P>
 	</div>
 </body>

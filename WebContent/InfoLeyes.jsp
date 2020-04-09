@@ -9,28 +9,25 @@
 <body>
 	<%@ include file="Navbar.jsp"%>
 
-	<c:choose>
-		<c:when test="${ partidoActivo == 'PSOE'}">
-			<li class="nav-item active activo" id="partidoLink">
-		</c:when>
-		<c:otherwise>
-			<li class="nav-item" id="partidoLink">
-		</c:otherwise>
-	</c:choose>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-6">
 				<img width="500" height="300"
-					src="https://image.shutterstock.com/image-photo/law-600w-307415057.jpg">
+					src="https://image.shutterstock.com/image-photo/raising-hands-participation-600w-676447282.jpg">
 			</div>
 			<div class="col-6">
 
-				<h2>Información de ${leyi.nombre}</h2>
+				<h2>Información de ${ley.nombre}</h2>
+			
+			
 
 			</div>
 
 		</div>
 
-		Aquí iria la descripción de la ley ${leyi.descripción}
+
+		Aquí iria la descripción del partido ${ley.descripcion}.
+		
+	<P>	PONER NUEVO ATRIBUTO DE LEY QUE SEA "FOTO" O ALGO ASÍ. lA IMAGEN QUE SE MUESTRE SEA SACADA DE LA BBDD.</P>
+	</div>
 </body>
