@@ -17,17 +17,14 @@
 			</div>
 			<div class="col-6">
 
-				<h2>Información de ${ley.nombre}</h2>
+				<h2>${ley.nombre}</h2>
 			
 			
 
 			</div>
 
 		</div>
-
-
-		Aquí iria la descripción del partido ${ley.descripcion}.
-		
-	<P>	PONER NUEVO ATRIBUTO DE LEY QUE SEA "FOTO" O ALGO ASÍ. lA IMAGEN QUE SE MUESTRE SEA SACADA DE LA BBDD.</P>
+		<p>${ley.descripcion}</p>
+		<p>PONER NUEVO ATRIBUTO DE LEY QUE SEA "FOTO" O ALGO ASÍ. lA IMAGEN QUE SE MUESTRE SEA SACADA DE LA BBDD.</p>
 	</div>
 </body>
