@@ -8,14 +8,14 @@
 <body>
 	<%@ include file="Navbar.jsp"%>
 	<div class="container">
-		<h1>Informaciï¿½n</h1>
+		<h1>Información</h1>
 		<div class="row">
 			<h2>
-				<div class="col-12">Seleccione la informaciï¿½n a la que quiere
+				<div class="col-12">Seleccione la información a la que quiere
 					acceder</div>
 			</h2>
 			<div class="col-12 col-md-6 text-center">
-				<h3>Partidos Polï¿½ticos</h3>
+				<h3>Partidos Políticos</h3>
 			</div>
 			<div class="col-12 col-md-6 text-center">
 				<h3>Leyes Pasadas</h3>
@@ -36,7 +36,7 @@
 								<input type="hidden" name="infoPartido" value="${partidoi.id}" />
 								<div class="text-center">
 								<button type="submit" name="button${partidoi.id}"
-									class="btn btn-outline-dark">Informaciï¿½n</button>
+									class="btn btn-outline-dark">Información</button>
 								</div>
 	
 							</form>
@@ -55,7 +55,7 @@
 								<input type="hidden" name="infoPartido" value="${partidoi.id}" />
 								<div class="text-center">
 								<button type="submit" name="button${partidoi.id}"
-									class="btn btn-outline-dark">Informaciï¿½n</button>
+									class="btn btn-outline-dark">Información</button>
 								</div>
 	
 							</form>
