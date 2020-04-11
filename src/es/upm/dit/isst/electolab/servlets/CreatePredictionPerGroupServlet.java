@@ -90,8 +90,7 @@ public class CreatePredictionPerGroupServlet extends HttpServlet {
 		votos.put("abstenciones",abstenciones);	
 		
 		req.getSession().setAttribute("predicciones",PrediccionDAOImplementation.getInstance().readAll());
-		Prediccion currentPrediction = PrediccionDAOImplementation.getInstance().read(prediccion.getId());
-		req.getSession().setAttribute("currentPrediction", currentPrediction);
+		req.getSession().setAttribute("currentPrediction", prediccion);
 		req.getSession().setAttribute("currentPredictionVotos", votos);
 		getServletContext().getRequestDispatcher("/Prediccion.jsp").forward(req,resp);
 	}

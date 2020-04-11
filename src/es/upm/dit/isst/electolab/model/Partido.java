@@ -22,8 +22,12 @@ public class Partido {
 	@Column
 	private Integer id;
 	@Column
+	private String siglas;
+	@Column(length=10000)
+	private String logo;
+	@Column
 	private String nombre;
-	@Column(length=2000)
+	@Column(length=10000)
 	private String descripcion;
 	@Column
 	@OneToMany(mappedBy = "partido", fetch = FetchType.EAGER)
@@ -43,6 +47,18 @@ public class Partido {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getSiglas() {
+		return siglas;
+	}
+	public void setSiglas(String siglas) {
+		this.siglas = siglas;
+	}
+	public String getLogo() {
+		return logo;
+	}
+	public void setLogo(String logo) {
+		this.logo = logo;
 	}
 	public String getNombre() {
 		return nombre;
@@ -99,11 +115,13 @@ public class Partido {
 	}
 	@Override
 	public String toString() {
-		return "Partido [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", diputados=" + diputados
-				+ ", grupoParlamentario=" + grupoParlamentario + ", votaciones=" + votaciones + "]";
+		return "Partido [id=" + id + ", siglas=" + siglas + ", logo=" + logo + ", nombre=" + nombre + ", descripcion="
+				+ descripcion + ", diputados=" + diputados + ", grupoParlamentario=" + grupoParlamentario
+				+ ", votaciones=" + votaciones + "]";
 	}
 	public Partido() {
 		super();
 	}
+	
 
 }

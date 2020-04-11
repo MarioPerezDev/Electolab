@@ -25,7 +25,7 @@ public class Ley {
 	private String nombre;
 	@Column
 	private Date fecha;
-	@Column
+	@Column(length=10000)
 	private String descripcion;
 	@OneToMany(mappedBy = "ley", fetch = FetchType.EAGER)
 	private Collection<Prediccion> predicciones;

@@ -1,430 +1,85 @@
+INSERT INTO GRUPOPARLAMENTARIO (ID, NOMBRE) VALUES ('1', 'SOCIALISTA'),('2', 'POPULAR EN EL CONGRESO',),('3', 'VOXI',),('4', 'CONFEDERAL DE UNIDAS PODEMOS-EN COMÚ PODEM-GALICIA EN COMÚN'),('5', 'REPUBLICANO')
+INSERT INTO GRUPOPARLAMENTARIO (ID, NOMBRE) VALUES ('6', 'PLURAL'),('7', 'CIUDADANSOI',),('8', 'VASCO (EAJ-PNV)'),('9', 'EUSKAL HERRIA BILDU'),('10', 'MIXTO',)
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('1', 'PSOE', 'PARTIDO SOCIALISTA OBRERO ESPAÑOL' ,'1', 'https://es.wikipedia.org/wiki/Partido_Socialista_Obrero_Espa%C3%B1ol#/media/Archivo:Logotipo_del_PSOE.svg', ' El Partido Socialista Obrero Español (PSOE) es un partido político español que se sitúa en la centroizquierda del espectro político. Desde el 18 de junio de 2017 está dirigido por el secretario general Pedro Sánchez, proclamado durante la celebración del XXXIX Congreso del partido. Fundado en 1879 por Pablo Iglesias Posse, durante cien años se definió como un partido de clase obrera, socialista y marxista, hasta el Congreso Extraordinario de 1979, en el que abandonó el marxismo como definición ideológica. Ha gobernado el país durante la mayor parte del régimen constitucional iniciado en 1978, con las presidencias de Felipe González (1982-1996), José Luis Rodríguez Zapatero (2004-2011) y Pedro Sánchez (2018-actualidad).')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('2', 'PSC', 'PARTIDO SOCIALISTA CATALÁN' ,'1', 'https://www.google.com/search?q=logo+psc&tbm=isch&ved=2ahUKEwjW3r7ul9voAhUl3OAKHTppBM0Q2-cCegQIABAA&oq=logo+psc&gs_lcp=CgNpbWcQARgAMgIIADIECAAQHjIECAAQHjIECAAQHjIECAAQHjIECAAQHjIECAAQHjIECAAQHjIECAAQHjIGCAAQCBAeOgQIABBDOgQIIxAnUPK3EljTwBJg-scSaABwAHgAgAFRiAHfAZIBATOYAQCgAQGqAQtnd3Mtd2l6LWltZw&sclient=img&ei=vf-OXpaMOKW4gwe60pHoDA&bih=840&biw=719&rlz=1C1CHBF_esES857ES857&safe=active#imgrc=zeh19qSRZKV5KM', ' El Partido de los Socialistas de Cataluña (PSC-PSOE) cuyas siglas son PSC es un partido político español de ámbito catalán de ideología socialdemócrata, catalanista y con doble identidad nacional que propugna públicamente el federalismo y la constitución de la «nación catalana». Fue creado el 16 de julio de 1978 mediante la fusión de los tres partidos socialistas existentes durante la Transición española en Cataluña. Está asociado al Partido Socialista Obrero Español (PSOE), del que es el referente en Cataluña y con quien comparte grupo parlamentario en el Congreso de los Diputados, en el Senado y el Parlamento Europeo.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('3', 'PP', 'PARTIDO POPULAR' ,'2', 'https://www.google.com/search?q=logo+pp&safe=active&rlz=1C1CHBF_esES857ES857&sxsrf=ALeKk024trzfDLwzbaIH6GiFsTvBxTwKMQ:1586429857705&source=lnms&tbm=isch&sa=X&ved=2ahUKEwibqIThl9voAhUCyYUKHWsBCHkQ_AUoAXoECAwQAw&biw=719&bih=840#imgrc=GJBaMTqeLplXpM', ' El Partido Popular (PP) es un partido político liberal conservador español situado en el centroderecha. Desde 2019, su presidente es Pablo Casado. Definido en sus estatutos como de «centro reformista» e inspirado en los valores del humanismo cristiano, tiene su origen en Alianza Popular (AP), un partido político fundado en 1976 como una federación de pequeños partidos conservadores, liderados por antiguos dirigentes del franquismo. Su líder más destacado era Manuel Fraga, ministro de Información y Turismo de la dictadura franquista entre 1962 y 1969, así como vicepresidente del Gobierno y ministro de la Gobernación entre 1975 y 1976, así como presidente y candidato de AP desde su fundación hasta 1987.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('4', 'VOX', 'VOX' ,'3', 'https://www.google.com/search?q=logo+vox&tbm=isch&ved=2ahUKEwjvz97hl9voAhWD0-AKHTLfCqQQ2-cCegQIABAA&oq=logo+vo&gs_lcp=CgNpbWcQARgAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECCMQJzoECAAQQ1CI4RdYje0XYNf0F2gAcAB4AIABXogBuAKSAQE0mAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=o_-OXq_yCoOngweyvqugCg&bih=840&biw=719&rlz=1C1CHBF_esES857ES857&safe=active#imgrc=gR-1x8kN7DIQ5M', 'Vox es un partido político español fundado a finales de 2013. Su presidente es Santiago Abascal y su secretario general es Javier Ortega Smith. Se le sitúa en la derecha del espectro político. Vox se registró como partido el 17 de diciembre de 2013. Surgió entre algunos de los críticos socialconservadores de Rajoy en el seno del PP, erosionado por la crisis económica. La formación, que inició su andadura con el objetivo de «recoger el voto de la derecha desencantada con las políticas del PP», no se presentó ante los medios de comunicación hasta el 16 de enero de 2014, a través de una rueda de prensa de sus promotores Cristina Seguí, José Antonio Ortega Lara, José Luis González Quirós, Santiago Abascal e Ignacio Camuñas. Alejo Vidal-Quadras, que el 27 de enero de 2014 abandonó el PP para unirse a Vox, resultó elegido a través de primarias presidente del partido y cabeza de lista para las elecciones al Parlamento Europeo de mayo.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('5', 'UNIDAS PODEMOS','UNIDAS PODEMOS', '4', 'https://www.google.com/search?q=logo+unidas+podemos+png&tbm=isch&ved=2ahUKEwjLm9W8mdvoAhWS0OAKHQ-BAh4Q2-cCegQIABAA&oq=logo+unidas+podemos+&gs_lcp=CgNpbWcQARgAMgIIADICCAAyAggAMgIIADIECAAQHjIGCAAQCBAeMgYIABAIEB5QwgdYwgdg2A1oAHAAeACAAVCIAVCSAQExmAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=bgGPXsusEpKhgwePgorwAQ&bih=840&biw=719&rlz=1C1CHBF_esES857ES857&safe=active#imgrc=9P1knqJpWuxp5M', 'Unidas Podemos (Podemos-IU; también conocida como UP) es una coalición electoral española de ideología de izquierda, registrada el 15 de marzo de 2019 ante la Junta Electoral Central (JEC) por los partidos Podemos, Izquierda Unida y Equo para concurrir a las elecciones generales de abril de 2019. Con una modificación de género gramatical respecto a la coalición Unidos Podemos se ha atribuido el cambio al femenino plural al «auge del movimiento feminista». Equo abandonó la alianza en septiembre de ese mismo año. Su presidente es Pablo Iglesias. ')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('6', 'EN COMÚ PODEM','EN COMÚ PODEM', '4', 'https://www.google.com/search?q=logo+en+comu+podem+png&tbm=isch&ved=2ahUKEwi6lYHemdvoAhWI2OAKHSYaCjoQ2-cCegQIABAA&oq=logo+en+comu+podem+png&gs_lcp=CgNpbWcQAzoECCMQJ1CfB1jgEGCGFGgAcAB4AIABUogBtAKSAQE0mAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=tAGPXrrrDYixgwemtKjQAw&bih=840&biw=719&rlz=1C1CHBF_esES857ES857&safe=active#imgrc=iTPi9ZC-cySJXM', ' En Comú Podem (ECP; en español, En Común Podemos) es una coalición electoral liderada por Jaume Asens i Llodrà, de ideología catalanista, plurinacionalista, socialista y democrática, situada en la izquierda del espectro político, formada por Barcelona en Comú, En Comú Podem, Iniciativa per Catalunya Verds, Esquerra Unida Catalunya, Catalunya en Comú, Podemos y Revolta Global-Esquerra Anticapitalista, y que cuenta con representación en el Congreso de los Diputados.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('7', 'GALICIA EN COMÚN', 'GALICIA EN COMÚN', '4', 'https://es.wikipedia.org/wiki/En_Com%C3%BAn#/media/Archivo:En_Com%C3%BAn_logo_(Nov_2019).png', ' En Común-Unidas Podemos (Podemos-EU), conocida simplemente como En Común o como Galicia en Común, es una coalición electoral formada por Podemos y Esquerda Unida, surgida en abril de 2019 tras retirarse de En Marea, con el objetivo de presentarse a las elecciones generales de ese año en las cuatro circunscripciones electorales de Galicia. En dicha convocatoria electoral, Equo y Mareas en Común también se sumaron a la coalición, concurriendo con el nombre de Podemos-EU-Mareas En Común-Equo.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('8', 'ERC', 'ESQUERRA REPUBLICANA CATALANA' , '5', 'https://es.wikipedia.org/wiki/Esquerra_Republicana_de_Catalunya#/media/Archivo:ERC_logo_2017.svg', 'Esquerra Republicana de Catalunya (ERC; en español, Izquierda Republicana de Cataluña), cuya marca genérica es Esquerra Republicana o simplemente Esquerra, es un partido político español fundado en Barcelona en 1931. Con presencia sobre todo en Cataluña, desde la década de 1990 también está presente en la Comunidad Valenciana, las Islas Baleares y el departamento francés de los Pirineos Orientales. De ideología independentista catalana, apuesta por la independencia de los territorios que comparten la lengua, cultura y la historia catalana, los denominados «Países Catalanes». ')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('9', 'SOBIRANISTES', 'SOBIRANISTES',  '5', 'https://es.wikipedia.org/wiki/Sobiranistes#/media/Archivo:Sobiranistes.svg', 'Sobiranistes (en español, Soberanistas) es un organización política de izquierdas, republicana y soberanista española creada como plataforma política el año 2018 y como partido político en 2019. La organización está liderada por Elisenda Alamany y Joan Josep Nuet. ')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('10', 'JXCAT', 'JUNTS PER CATALUNYA' , '6', 'https://es.wikipedia.org/wiki/Junts_per_Catalunya#/media/Archivo:Junts_per_Catalunya.svg', 'Junts per Catalunya (JxCat) (en español: Juntos por Cataluña) es un coalición política española, inscrita como partido político y de ideología independentista catalana. Nació como una candidatura electoral independentista que se presentó a las elecciones al Parlamento de Cataluña de 2017 configurada como una coalición electoral entre el Partit Demòcrata Europeu Català (PDeCAT) y Convergència Democràtica de Catalunya (CDC), en cuyas listas se incluyeron también independientes. La candidatura fue liderada por Carles Puigdemont.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('11', 'MÁS PAÍS-EQUO', 'MÁS PAÍS-EQUO','6', 'https://www.google.com/search?q=logo+mas+pais+equo&safe=active&rlz=1C1CHBF_esES857ES857&sxsrf=ALeKk03QwYFYl6KfatQv8AYfYAEEvatFFg:1586430643586&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjx1uLXmtvoAhUQ8BoKHZhqAzkQ_AUoAXoECAwQAw&biw=719&bih=840&dpr=1.5#imgrc=W0Hin5sECxAoyM', ' Más País-Equo es una coalición formada por la unión de los partidos Más País y Equo, liderada por Iñigo Errejón. Más País (MP) es un partido político español de izquierda, ecologista y feminista presentado el 25 de septiembre de 2019. Equo (también escrito EQUO, y abreviado en ocasiones como Q) es un partido político español ecologista creado en 2011. Desde mayo de 2013 forma parte del Partido Verde Europeo, que le había mostrado su apoyo desde sus inicios. A nivel mundial tiene carácter de observador en Global Greens.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('12', 'MÉS COMPROMÍS', 'MÉS COMPROMÍS','6', 'https://es.wikipedia.org/wiki/M%C3%A9s_Comprom%C3%ADs#/media/Archivo:M%C3%A9s_Comprom%C3%ADs.png', 'Més Compromís (en español, "Más Compromiso") fue una coalición electoral conformada por Compromís y Más País para las elecciones generales de España de noviembre de 2019. Liderada por Joan Baldoví, la coalición tiene una ideología progresista, federalista, ecologista y valencianista, situada en la izquierda del espectro político.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('13', 'BNG', 'BLOQUE NACIONALISTA GALEGO' ,'6', 'https://es.wikipedia.org/wiki/Bloque_Nacionalista_Galego#/media/Archivo:Bloque_Nacionalista_Galego.svg', 'El Bloque Nacionalista Galego (BNG, en castellano "Bloque Nacionalista Gallego") es una formación política española cuya ideología se fundamenta en el nacionalismo gallego de izquierdas. Su principal ámbito territorial se circunscribe a la comunidad autónoma de Galicia aunque se ha presentado a las elecciones generales españolas ininterrumpidamente desde 1986 y a las elecciones al parlamento europeo desde 1987, en solitario o en coalición con otros partidos. El independentismo tiene amplio apoyo entre su militancia, especialmente en su sector juvenil Galiza Nova. ')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('14', 'CIUDADANOS', 'CIUDADANOS', '7', 'https://es.wikipedia.org/wiki/Ciudadanos_(Espa%C3%B1a)#/media/Archivo:Ciudadanos_logo_2017.svg', ' Ciudadanos-Partido de la Ciudadanía, o simplemente Ciudadanos (Cs), es un partido político español fundado en 2006 en Barcelona, con germen en la plataforma cívica Ciutadans de Catalunya. Se ha extendido por el país, alcanzando representación en el Parlamento Europeo, el Senado, el Congreso de los Diputados, diversos parlamentos autonómicos y en algunos ayuntamientos. Ciudadanos nació a partir de la plataforma cívica Ciutadans de Catalunya, creada el 7 de junio de 2005 en Barcelona por un grupo de quince intelectuales, profesores universitarios y profesionales de diversos campos. Ante los resultados tan decadentes para el partido, el hasta entonces líder de la fuerza naranja, Albert Rivera, dimitiría signa de la presidencia de este. Su dimisión fue presentada ante la Ejecutiva Nacional de Ciudadanos al día siguiente de realizarse los comicios de noviembre de 2019. Desde entonces, su presidenta es Inés Arrimadas.' )
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('15', 'EAJ-PNV', 'PARTIDO NACIONALISTA VASCO' , '8', 'https://es.wikipedia.org/wiki/Partido_Nacionalista_Vasco#/media/Archivo:EAJ-PNV.png',  ' El Partido Nacionalista Vasco, oficialmente Euzko Alderdi Jeltzalea-Partido Nacionalista Vasco (en euskera, Eusko Alderdi Jeltzalea, en francés, Parti Nationaliste Basque; EAJ-PNV o, en Francia, EAJ-PNB), es un partido político creado en 1895 de ideología nacionalista vasca, liberal y demócrata cristiana, que se sitúa en el centro del espectro político. Su actividad radica en el País Vasco, Navarra, el País Vasco francés y el enclave de Treviño (Burgos, Castilla y León).' )
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('16', 'EH-BILDU', 'EUSKAL HERRIA BILDU' , '9', 'https://es.wikipedia.org/wiki/Euskal_Herria_Bildu#/media/Archivo:EHBilduLogoBerdea.svg', ' Euskal Herria Bildu (EH Bildu, también llamada simplemente Bildu) —"Reunir Euskal Herria, en euskera— es un partido radicado en las comunidades autónomas españolas del País Vasco y Navarra. No obstante, por motivos políticos también presenta candidaturas a las elecciones municipales y submunicipales en Castilla y León —en el Condado de Treviño y La Puebla de Arganzón, ambos en la provincia de Burgos—. Adscrita ideológicamente a la izquierda abertzale, en 2012 por los partidos políticos Sortu, Eusko Alkartasuna, Aralar (disuelto) y Alternatiba, integrando a varios electos independientes. En 2014 se inscribe como partido en el Ministerio del Interior de España. En el País Vasco francés mantiene acuerdos con su homóloga Euskal Herria Bai orientados a la creación de un Estado vasco para Euskal Herria.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('17', 'CUP-PR', 'CANDIDATURA DE UNIDAD POPULAR', '10', 'https://es.wikipedia.org/wiki/Candidatura_de_Unidad_Popular#/media/Archivo:CUP.svg',  ' La Candidatura de Unidad Popular (en catalán, Candidatura dUnitat Popular), conocido simplemente por sus siglas CUP, es un partido político español de izquierda, defensor de la independencia de Cataluña y de los territorios denominados "Países Catalanes" y adscrita ideológicamente a la Esquerra Independentista. La CUP ha sido definida como «un partido movimiento: un híbrido entre un clásico partido de masas y una compleja alianza entre partidos y movimientos sociales». Su ámbito de actuación no se circunscribe a Cataluña sino que se extiende al conjunto de los llamados Països Catalans y además se opone al centralismo de Barcelona. No reconoce al Estado Español ni a la monarquía y «su programa combate activamente el patriarcalismo y el envenenamiento del territorio», comenta el historiador Enric Ucelay-Da Cal. Por otro lado, como ha señalado este mismo historiador, «toda la variedad de grupúsculos que salieron del PSAN y del nacimiento del independentismo han encontrado su espacio efectivo y operativo en la CUP».' )
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('18', 'UPN', 'UNIÓN PUEBLO NAVARRO', '10', 'https://es.wikipedia.org/wiki/Navarra_Suma#/media/Archivo:NA+.svg', ' Navarra Suma (NA+) es una coalición electoral de ámbito navarro integrada por los partidos políticos Unión del Pueblo Navarro, Ciudadanos y Partido Popular de Navarra para concurrir por la circunscripción de Navarra a las elecciones generales de España de abril y noviembre, así como a las elecciones al Parlamento de Navarra y a las elecciones municipales de 2019.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('19', 'CC-PNC', 'COALICIÓN CANARIA' , '10', 'https://es.wikipedia.org/wiki/Coalici%C3%B3n_Canaria#/media/Archivo:Coalici%C3%B3n_Canaria.svg', 'Coalición Canaria (CCa) es una formación política española fundada en 1993 que agrupó varios partidos nacionalistas, insularistas y conservadores canarios. Gobernó la comunidad autónoma de Canarias ininterrumpidamente desde 1993, cuando accedió al gobierno autonómico a través de una moción de censura hasta 2019. En sus casi 25 años de mandato su principal postura política ha sido conseguir una mayor autonomía dentro de España sin tener por ello que renunciar a él. En la actualidad, no gobierna en ningún cabildo. CC está integrada en el Grupo Plural en el Congreso de los Diputados con 1 escaño.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('20', 'NC', 'NUEVA CANARIAS' , '10', 'https://es.wikipedia.org/wiki/Nueva_Canarias#/media/Archivo:Nueva_Canarias.png', ' Nueva Canarias (NC; también conocido como NCa) es un partido político nacionalista de centroizquierda, radicado en Canarias (España). Fue fundado en la isla de Gran Canaria por Román Rodríguez, expresidente del Gobierno de Canarias, tras la escisión de miembros de la antigua Iniciativa Canaria Nacionalista (ICAN) de Coalición Canaria. Tras la creación de Nueva Canarias (que contaba con un diputado, Román Rodríguez, y con un senador, José Mendoza, de designación autonómica), ésta amenazó con romper los grupos en el Congreso y el Senado con Coalición Canaria si no se llegaba a un acuerdo sobre la división de funciones en las labores parlamentarias. Como resultado se creó el nuevo grupo político Coalición Canaria-Nueva Canarias, compartiendo la portavocía, los turnos de palabra y los trabajos en comisión. Finalmente, en junio de 2007 Román Rodríguez pasó al Grupo Mixto provocando la desaparición de este grupo parlamentario propio. Los senadores de designación autonómica propuestos en 2007 no incluían a ningún senador de Nueva Canarias.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('21', 'PRC', 'PARTIDO REGIONALISTA DE CANTABRIA', '10', 'https://es.wikipedia.org/wiki/Partido_Regionalista_de_Cantabria#/media/Archivo:Logo_PRC_compacto.svg', ' El Partido Regionalista de Cantabria (PRC) es un partido político español de carácter regionalista cántabro cuyo ámbito territorial se circunscribe a la comunidad autónoma de Cantabria. El secretario general del partido es, desde 1988, Miguel Ángel Revilla. Se fundó a finales de 1978. Tuvo su origen en la Asociación para la Defensa de los Intereses de Cantabria (ADIC) y su objetivo inicial era promover la autonomía de la provincia de Santander, con el nombre de Cantabria, y así evitar que formase parte de Castilla y León. Ha formado parte de gobiernos de coalición en Cantabria entre 1995 y 2011. Hasta 2003 lo hizo con el Partido Popular. Desde ese año, ostentando la presidencia de la comunidad, en coalición con el PSOE. Su presencia institucional actual está compuesta por 14 diputados en el Parlamento de Cantabria y más de 300 concejales. Además, forma parte del equipo de gobierno en 82 de los 102 municipios con que consta la comunidad autónoma, de los cuales 30 cuentan con un alcalde regionalista. Reinosa es el municipio más poblado en el que ostenta la alcaldía. En 2012 es la segunda fuerza política en el parlamento autonómico y la tercera por votos en las elecciones generales y municipales (segunda en alcaldes y concejales).')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('22', 'TE', 'TERUEL EXISTE', '10', 'https://es.wikipedia.org/wiki/Teruel_Existe#/media/Archivo:Teruel_Existe_logo.png', ' Teruel Existe (TE) es una coordinadora ciudadana fundada en noviembre de 1999 a partir de varias plataformas como En Defensa del Ferrocarril, Pro Helicóptero y Transporte Sanitario o Pro Salud Mental. La plataforma tiene como objetivo demandar un trato justo e igualitario para la provincia de Teruel (España). En 1999 Teruel todavía no tenía autovías, y en la única línea de ferrocarril (de vía única sin electrificar) el tren había descarrilado 8 veces en un año. La plataforma obtuvo un diputado y dos senadores en las elecciones generales de noviembre de 2019, tras presentarse como agrupación de electores.')
+INSERT INTO PARTIDO(ID, SIGLAS, NOMBRE, GRUPOPARLAMENTARIO_ID, LOGO, DESCRIPCION) VALUES ('23', 'FORO', 'FORO DE ASTURIAS' , '10', 'https://es.wikipedia.org/wiki/Foro_de_Ciudadanos#/media/Archivo:Foro_Asturias_logo.svg', 'Foro de Ciudadanos (FAC), más conocido como Foro Asturias (FORO), es un partido político asturiano cuya presidenta es Carmen Moriyón Entrialgo. Se fundó el 18 de enero de 2011 tras la salida del exministro Francisco Álvarez-Cascos, el 1 de enero, del Partido Popular debido a las tensiones con la sede central del partido en Madrid y con el partido en Asturias tras hacer pública su intención de presentarse como cabeza de lista en las elecciones a la Junta General del Principado de Asturias de 2011 por el PP.'),
 
-INSERT INTO GRUPOPARLAMENTARIO (ID, NOMBRE, VOTO) VALUES ('1', 'SOCIALISTA', 'FAVOR'),('2', 'POPULAR EN EL CONGRESO', 'CONTRA'),('3', 'VOXI', 'CONTRA'),('4', 'CONFEDERAL DE UNIDAS PODEMOS-EN COMï¿½ PODEM-GALICIA EN COMï¿½N', 'FAVOR'),('5', 'REPUBLICANO', 'FAVOR')
-INSERT INTO GRUPOPARLAMENTARIO (ID, NOMBRE, VOTO) VALUES ('6', 'PLURAL', 'FAVOR'),('7', 'CIUDADANSOI', 'CONTRA'),('8', 'VASCO (EAJ-PNV)', 'FAVOR'),('9', 'EUSKAL HERRIA BILDU', 'FAVOR'),('10', 'MIXTO', 'CONTRA')
-INSERT INTO PARTIDO(ID, DESCRIPCION, NOMBRE, VOTO, GRUPOPARLAMENTARIO_ID) VALUES ('1', 'DE IZQUIERDAS', 'PSOE', 'FAVOR', 1),('2', 'DE IZQUIERDAS CATALANES', 'PSC', 'FAVOR', 1),('3', 'DE DERECHAS', 'PP', 'CONTRA', 2),('4', 'DE DERECHAS', 'VOX', 'CONTRA', 3)
-INSERT INTO PARTIDO(ID, DESCRIPCION, NOMBRE, VOTO, GRUPOPARLAMENTARIO_ID) VALUES ('5', 'DE IZQUIERDAS', 'UNIDAS PODEMOS', 'FAVOR', 4),('6', 'DE IZQUIERDAS CATALANES', 'EN COMï¿½ PODEM', 'FAVOR', 4),('7', 'DE IZQUIERDAS GALLEGOS', 'GALICIA EN COMï¿½N', 'FAVOR', 4),('8', 'CATALANES SUBNORMALES', 'ERC', 'FAVOR', 5)
-INSERT INTO PARTIDO(ID, DESCRIPCION, NOMBRE, VOTO, GRUPOPARLAMENTARIO_ID) VALUES ('9', 'DE IZQUIERDAS', 'SOBIRANISTES', 'FAVOR', 5),('10', 'CATALANES', 'JXCAT', 'FAVOR', 6),('11', 'DE IZQUIERDAS CON ERREJï¿½N', 'Mï¿½S PAï¿½S-EQUO', 'FAVOR', 6),('12', 'DE IZQUIERDAS', 'Mï¿½S COMPROMï¿½S', 'FAVOR', 6)
-INSERT INTO PARTIDO(ID, DESCRIPCION, NOMBRE, VOTO, GRUPOPARLAMENTARIO_ID) VALUES ('13', 'NACIONALISTAS GALLEGOS DE IZQUIERDAS', 'BNG', 'FAVOR', 6),('14', 'CENTRO', 'CIUDADANOS', 'CONTRA', 7),('15', 'NACIONALISTAS VASCOS', 'EAJ-PNV', 'CONTRA', 8),('16', 'VASCOS', 'EH-BILDU', 'CONTRA', 9)
-INSERT INTO PARTIDO(ID, DESCRIPCION, NOMBRE, VOTO, GRUPOPARLAMENTARIO_ID) VALUES ('17', 'CATALANES INDEPENDENTISTAS', 'CUP-PR', 'CONTRA', 10),('18', 'COALICIï¿½N NAVARRA', 'UPN', 'CONTRA', 10),('19', 'COALICIï¿½N CANARIA', 'CC-PNC', 'CONTRA', 10),('20', 'DE IZQUIERDAS CANARIO', 'NC', 'FAVOR', 10)
-INSERT INTO PARTIDO(ID, DESCRIPCION, NOMBRE, VOTO, GRUPOPARLAMENTARIO_ID) VALUES ('21', 'PARTIDO Cï¿½NTABRO', 'PRC', 'FAVOR', 10),('22', 'PARTIDO DE TERUEL', 'TE', 'FAVOR', 10),('23', 'PARTIDO ASTURIANO', 'FORO', 'FAVOR', 10),
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES ('1', 'ï¿½BALOS', 'MECO', 'JOSï¿½ LUIS', 'FAVOR', 1),
-('2', 'ABASCAL', 'CONDE', 'SANTIAGO', 'FAVOR', 2),
-('3', 'ACEVES', 'GALINDO', 'JOSï¿½ LUIS', 'FAVOR', 1),
-('4', 'AGIRRETXEA', 'URRESTI', 'JOSEBA ANDONI', 'FAVOR', 1),
-('5', 'AIZCORBE', 'TORRA', 'JUAN JOSï¿½', 'FAVOR', 1),
-('6', 'AIZPURUA', 'ARZALLUS', 'MERTXE', 'FAVOR', 1),
-('7', 'ALCARAZ', 'MARTOS', 'FRANCISCO JOSï¿½', 'FAVOR', 1),
-('8', 'ALFONSO', 'CENDï¿½N', 'JAVIER', 'FAVOR', 1),
-('9', 'ALMODï¿½BAR', 'BARCELï¿½', 'AGUSTï¿½N', 'FAVOR', 1),
-('10', 'ALONSO', 'Pï¿½REZ', 'JOSï¿½ ï¿½NGEL', 'FAVOR', 1)
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('1', 'ÁBALOS', 'MECO', 'JOSÉ LUIS', '1'),('2', 'ABASCAL', 'CONDE', 'SANTIAGO', '4'),('3', 'ACEVES', 'GALINDO', 'JOSÉ LUIS', '1'),('4', 'AGIRRETXEA', 'URRESTI', 'JOSEBA ANDONI', '15'),('5', 'AIZCORBE', 'TORRA', 'JUAN JOSÉ', '4'),('6', 'AIZPURUA', 'ARZALLUS', 'MERTXE', '16'),('7', 'ALCARAZ', 'MARTOS', 'FRANCISCO JOSÉ', '4'),('8', 'ALFONSO', 'CENDÓN', 'JAVIER', '1'),('9', 'ALMODÓBAR', 'BARCELÓ', 'AGUSTÍN', '3'),('10', 'ALONSO', 'PÉREZ', 'JOSÉ ÁNGEL', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('11', 'ALONSO', 'SUÁREZ', 'MARÍA OLGA', '1'),('12', 'ALONSO-CUEVILLAS', 'i SAYROL', 'JAUME', '10'),('13', 'ÁLVAREZ DE TOLEDO', 'PERALTA-RAMOS', 'CAYETANA', '3'),('14', 'ÁLVAREZ', 'FANJUL', 'BEATRIZ', '3'),('15', 'ANDRÉS', 'AÑÓN', 'CARMEN', '2'),('16', 'ANDRÉS', 'BAREA', 'JOSEFA', '1'),('17', 'ANGUITA', 'PÉREZ', 'OMAR', '1'),('18', 'ÁNGULO', 'ROMERO', 'MARÍA TERESA', '3'),('19', 'ANTÓN', 'CACHO', 'JAVIER', '1'),('20', 'ARAGONÉS', 'MENDIGUCHÍA', 'CARLOS', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('21', 'ARANDA', 'VARGAS', 'FRANCISCO', '2'),('22', 'ARAUJO', 'MORALES', 'GEMMA', '1'),('23', 'ARRIBAS', 'MAROTO', 'MANUEL', '1'),('24', 'ARRIMADAS', 'GARCÍA', 'INÉS', '14'),('25', 'ASARTA', 'CUEVAS', 'ALBERTO', '4'),('26', 'ASENS', 'LLODRÀ', 'JAUME', '6'),('27', 'ASORÍN', 'SALAR', 'LÁZARO', '1'),('28', 'BAL', 'FRANCÉS', 'EDMUNDO', '14'),('29', 'BALDOVÍ', 'RODA', 'JOAN', '12'),('30', 'BAÑOS', 'RUIZ', 'CARMEN', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('31', 'BARANDIARAN', 'BENITO', 'IÑIGO', '15'),('32', 'BAS', 'CORUGEIRA', 'JAVIER', '3'),('33', 'BASSA', 'COLL', 'MONTSERRAT', '8'),('34', 'BEL', 'ACCENSI', 'FERRAN', '10'),('35', 'BELARRA', 'URTEAGA', 'IONE', '5'),('36', 'BELTRÁN', 'VILLALBA', 'ANA MARÍA', '3'),('37', 'BERJA', 'VEGA', 'LAURA', '1'),('38', 'BERMÚDEZ DE CASTRO', 'FERNÁNDEZ', 'JOSÉ ANTONIO', '3'),('39', 'BETORET', 'COLL', 'VICENTE', '3'),('40', 'BLANQUEAR', 'ÁLCARAZ', 'PATRICIA', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('41', 'BOADELLA', 'ESTEVE', 'GENÍS', '10'),('42', 'BORRÁS', 'CASTANYER', 'LAURA', '10'),('43', 'BORRÁS', 'PABÓN', 'MIREIA', '4'),('44', 'BORREGO', 'CORTÉS', 'ISABEL MARÍA', '3'),('45', 'BOTELLA', 'GÓMEZ', 'ANA MARÍA', '1'),('46', 'BOTRAN', 'PAHISSA', 'ALBERT', '17'),('47', 'BRAVO', 'BARCO', 'EVA', '1'),('48', 'BUENO', 'CAMPANARIO', 'EVA PATRICIA', '1'),('49', 'CABALLERO', 'GUTIÉRREZ', 'HELENA', '1'),('50', 'CABEZÓN', 'CASAS', 'TOMÁS', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('51', 'CALLEJAS', 'CANO', 'JUAN ANTONIO', '3'),('52', 'CALVO', 'LISTE', 'PABLO JUAN', '4'),('53', 'CALVO', 'POYATO', 'CARMEN', '1'),('54', 'CAMBRONERO', 'PIQUERAS', 'PABLO', '14'),('55', 'CAÑADELL', 'SALVIA', 'CONCEP', '10'),('56', 'CANALES', 'DUQUE', 'MARIANA DE GRACIA', '1'),('57', 'CANCELA', 'RODRÍGUEZ', 'PILAR', '1'),('58', 'CAÑIZARES', 'PACHECO', 'INÉS MARÍA', '4'),('59', 'CANTERA', 'DE CASTRO', 'ZAIDA', '1'),('60', 'CAPDEVILA', 'i ESTEVE', 'JOAN', '8')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('61', 'CARAZO', 'HERMOSO', 'EDUARDO', '3'),('62', 'CARCEDO', 'ROCES', 'MARÍA LUISA', '1'),('63', 'CARRILLO', 'DE LOS REYES', 'BEATRIZ MICAELA', '1'),('64', 'CARVALHO', 'DANTAS', 'MARÍA', '8'),('65', 'CASADO', 'BLANCO', 'PABLO', '3'),('66', 'CASARES', 'HONTAÑÓN', 'PEDRO', '1'),('67', 'CASERO', 'ÁVILA', 'ALBERTO', '3'),('68', 'CASTELLÓN', 'RUBIO', 'MIGUEL ÁNGEL', '3'),('69', 'CASTILLO ', 'LÓPEZ', 'ELENA', '3'),('70', 'CERDÁN', 'LEÓN', 'SANTOS', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES('71', 'CERQUEIRO', 'GONZÁLEZ', 'JAVIER', '1'),('72', 'CHAMORRO', 'DELMO', 'RICARDO', '4'),('73', 'CLAVELL', 'LÓPEZ', 'ÓSCAR', '3'),('74', 'CONTRERAS', 'PELÁEZ', 'FRANCISCO JOSÉ', '4'),('75', 'CORTÉS', 'CARBALLO', 'MARIO', '3'),('76', 'CORTÉS', 'GÓMEZ', 'ISMAEL', '6'),('77', 'CRESPÍN', 'RUBIO', 'RAFAELA', '1'),('78', 'CRUZ-GUZMÁN', 'GARCÍA', 'MARÍA SOLEDAD', '3'),('79', 'CUATRECASAS', 'ASUA', 'JUAN', '1'),('80', 'DE LAS HERAS', 'FERNÁNDEZ', 'PATRICIA', '4')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES('81', 'DE LUNA', 'TOBARRA', 'LLANOS', '3'),('82', 'DE MEER', 'MÉNDEZ', 'ROCÍO', '4'),('83', 'DE QUINTO', 'ROMERO', 'MARCOS', '14'),('84', 'DEL VALLE', 'DE ISCAR', 'JULIO', '1'),('85', 'DEL VALLE', 'RODRÍGUEZ', 'EMILIO JESÚS', '4'),('86', 'DELGADO', 'ARCE', 'CELSO LUIS', '3'),('87', 'DÍAZ', 'GÓMEZ', 'GUILLERMO', '14'),('88', 'DÍAZ', 'PÉREZ', 'YOLANDA', '7'),('89', 'DIOUF', 'DIOH', 'LUC ANDRE', '1'),('90', 'DURÁN', 'PERALTA', 'JOSÉ CARLOS', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('91', 'ECHÁNIZ', 'SALGADO', 'JOSÉ IGNACIO', '3'),('92', 'ECHENIQUE', 'ROBBA', 'PABLO', '5'),('93', 'ELIZO', 'SERRANO', 'ODÓN', '5'),('94', 'ERITJA', 'CIURÓ', 'FRANCESC XAVIER', '8'),('95', 'ERREJÓN', 'GALVÁN', 'IÑIGO', '11'),('96', 'ESPAÑA', 'REINA', 'CAROLINA', '3'),('97', 'ESPEJO-SAAVEDRA', 'CONESA', 'JOSÉ MARÍA', '14'),('98', 'ESPINOSA DE LOS MONTEROS', 'DE SIMÓN', 'IVÁN', '4'),('99', 'ESTEBAN', 'BRAVO', 'AITOR', '15'),('100', 'ESTEBAN', 'CALONJE', 'CRISTINA ALICIA', '4')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('101', 'FAGÚNDEZ', 'CAMPO', 'ANTIDIO', '1'),('102', 'FANECA', 'LÓPEZ', 'MARÍA LUISA', '1'),('103', 'FERNÁNDEZ', 'BENÉITEZ', 'ANDREA', '1'),('104', 'FERNÁNDEZ', 'CASERO', 'ANA BELÉN', '1'),('105', 'FERNÉNDEZ', 'CASTAÑÓN', 'SOFÍA', '5'),('106', 'FERNÁNDEZ', 'HERNÁNDEZ', 'PEDRO', '4'),('107', 'FERNÁNDEZ', 'RÍOS', 'TOMÁS', '4'),('108', 'FERNÁNDEZ-LOMANA', 'GUTIÉRREZ', 'RAFAEL', '4'),('109', 'FERNÁNDEZ-ROCA', 'SUÁREZ', 'CARLOS HUGO', '4'),('110', 'FERRER', 'TESORO', 'SONIA', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('111', 'FIGAREDO', 'ÁLVAREZ-SALA', 'JOSÉ MARÍA', '4'),('112', 'FRANCO', 'CARMONA', 'ISABEL', '5'),('113', 'FUENTES', 'CURBELO', 'JUAN BERNARDO', '1'),('114', 'GAGO', 'BUGARÍN', 'DIEGO', '3'),('115', 'GAMARRA', 'RUIZ-CLAVIJO', 'CONCEPCIÓN', '3'),('116', 'GAMAZO', 'MICÓ', 'ÓSCAR', '3'),('117', 'GARCÉS', 'SAN AGUSTÍN', 'MARIO', '3'),('118', 'GARCÍA', 'ADANERO', 'CARLOS', '18'),('119', 'GARCÍA', 'CHAVARRÍA', 'MARÍA MONTSERRAT', '1'),('120', 'GARCÍA', 'DÍEZ', 'JOAQUÍN MARÍA', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('121', 'GARCÍA', 'EGEA', 'TEODORO', '3'),('122', 'GARCÍA', 'GÓMEZ', 'VALENTÍN', '1'),('123', 'GARCÍA', 'LÓPEZ', 'MARIBEL', '1'),('124', 'GARCÍA', 'MORÍS', 'ROBERTO', '1'),('125', 'GARCÍA', 'PUIG', 'MARÍA DEL MAR', '6'),('126', 'GARCÍA', 'RODRÍGUEZ', 'ALICIA', '3'),('127', 'GARCÍA', 'TEJERINA', 'ISABEL', '3'),('128', 'GARCÍA-PELAYO', 'JURADO', 'MARÍA JOSÉ', '3'),('129', 'GARRIDO', 'GUTIÉRREZ', 'PILAR', '5'),('130', 'GARRIGA', 'VAZ DE CONCICAO', 'IGNACIO', '4')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('131', 'GARZÓN', 'ESPINOSA', 'ALBERTO', '5'),('132', 'GÁZQUEZ', 'COLLADO', 'PALOMA', '3'),('133', 'GESTOSO', 'DE MIGUEL', 'LUIS', '4'),('134', 'GIL', 'LÁZARO', 'IGNACIO', '4'),('135', 'GIMÉNEZ', 'GIMÉNEZ', 'SARA', '14'),('136', 'GÓMEZ', 'HERNÁNDEZ', 'HECTOR', '1'),('137', 'GÓMEZ-REINO', 'VARELA', 'ANTÓN', '7'),('138', 'GONZÁLEZ', 'CABALLERO', 'MIGUEL ÁNGEL', '1'),('139', 'GONZÁLEZ', 'COELLO DE PORTUGAL', 'VICTOR', '4'),('140', 'GONZÁLEZ', 'GUINDA', 'MARÍA DEL CARMEN', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('141', 'GONZÁLEZ', 'PÉREZ', 'ARIGONA', '1'),('142', 'GONZÁLEZ', 'RAMOS', 'MANUEL GABRIEL', '1'),('143', 'GONZÁLEZ', 'TEROL', 'ANTONIO', '3'),('144', 'GONZÁLEZ', 'VÁZQUEZ', 'MARTA', '3'),('145', 'GOROSPE', 'ELEZCANO', 'JOSUNE', '15'),('146', 'GRANOLLERS', 'CUNILLERA', 'INÉS', '8'),('147', 'GUAITA', 'ESTERUELAS', 'SANDRA', '2'),('148', 'GUERRA', 'LÓPEZ', 'SONIA', '2'),('149', 'GUIJARRO', 'CEBALLOS', 'MARÍA', '1'),('150', 'GUIJARRO', 'GARCÍA', 'TXEMA', '5')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('151', 'GUINART', 'MORENO', 'LIDIA', '2'),('152', 'GUITARTE', 'GIMENO', 'TOMÁS', '22'),('153', 'GUTIÉRREZ', 'DÍAZ DE OTAZU', 'FERNANDO ADOLFO', '3'),('154', 'GUTIÉRREZ', 'PRIETO', 'SERGIO', '1'),('155', 'GUTIÉRREZ', 'SALINAS', 'INDALECIO', '1'),('156', 'HERNANZ', 'COSTA', 'SOFÍA', '1'),('157', 'HERRERO', 'BONO', 'JOSÉ ALBERTO', '3'),('158', 'HISPÁN', 'IGLESIAS DE USSEL', 'PABLO', '3'),('159', 'HONRUBIA', 'HURTADO', 'PEDRO ANTONIO', '5'),('160', 'HOYO', 'JULIÁ', 'BELÉN', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('161', 'HURTADO', 'ZURERA', 'ANTONIO', '1'),('162', 'IGLESIAS', 'TURRIÓN', 'PABLO', '5'),('163', 'ILLAMOLA', 'DAUSÀ', 'MARIONA', '10'),('164', 'IÑARRITU', 'GARCÍA', 'JON', '16'),('165', 'JEREZ', 'JUAN', 'MIGUEL ÁNGEL', '3'),('166', 'JIMÉNEZ', 'LINUESA', 'BEATRIZ', '3'),('167', 'JIMÉNEZ', 'REVUELTA', 'RODRIGO', '4'),('168', 'JIMÉNEZ-BECERRIL', 'BARRIO', 'MARÍA TERESA', '3'),('169', 'JOSÉ', 'VÉLEZ', 'RAFAEL', '1'),('170', 'JOVER', 'DÍAZ', 'ANTONIA', '5')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('171', 'LAMUÁ', 'ESTAÑOL', 'MARC', '2'),('172', 'LASTRA', 'FERNÁNDEZ', 'ADRIANA', '1'),('173', 'LEAL', 'FERNÁNDEZ', 'ISAURA', '1'),('174', 'LEDESMA', 'MARTÍN', 'SEBASTIÁN JESÚS', '3'),('175', 'LEGARDA', 'URIARTE', 'MIKEL', '15'),('176', 'LIMA', 'CID', 'FUENSANTA', '1'),('177', 'LÓPEZ', 'ÁLVAREZ', 'MARÍA TERESA', '4'),('178', 'LÓPEZ', 'ÁLVAREZ', 'PATXI', '1'),('179', 'LÓPEZ', 'CANO', 'IGNACIO', '1'),('180', 'LÓPEZ DE URALDE', 'GARMENDIA', 'JUAN ANTONIO', '5')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('181', 'LÓPEZ', 'DOMÍNGUEZ', 'LAURA', '6'),('182', 'LÓPEZ', 'MARAVER', 'ÁNGEL', '4'),('183', 'LÓPEZ', 'SOMORA', 'GEMA', '1'),('184', 'LÓPEZ', 'ZAMORA', 'CRISTINA', '1'),('185', 'LORITE', 'LORITE', 'ANDRÉS', '3'),('186', 'LOSADA', 'FERNÁNDEZ', 'JOSÉ', '1'),('187', 'MAESTRO', 'MOLINER', 'ROSER', '5'),('188', 'MENSO', 'OLIVAR', 'RUBÉN SILVANO', '4'),('189', 'MARCOS', 'DOMÍNGUEZ', 'PILAR', '3'),('190', 'MARCOS', 'ORTEGA', 'MILAGROS', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('191', 'MARGALL', 'SASTRE', 'JOAN', '8'),('192', 'MARI', 'KLOSE', 'PAU', '1'),('193', 'MARISCAL', 'ANAYA', 'GUILLERMO', '3'),('194', 'MARISCAL', 'ZABALA', 'MANUEL', '4'),('195', 'MÁRQUEZ', 'GUERRERO', 'MARÍA', '5'),('196', 'MARRA', 'DOMÍNGUEZ', 'MARÍA ÁNGELES', '1'),('197', 'MARTÍN', 'LLAGUNO', 'MARTA', '14'),('198', 'MARTÍNEZ', 'FERRO', 'MARÍA VALENTINA', '3'),('199', 'MARTÍNEZ', 'GRANADOS', 'MARÍA CARMEN', '14'),('200', 'MARTÍNEZ', 'OBLANCA', 'ISIDRO MANUEL', '23')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('201', 'MARTÍNEZ', 'SEIJO', 'MARÍA LUZ', '1'),('202', 'MATARÍ', 'SÁEZ', 'JUAN JOSÉ', '3'),('203', 'MATEU', 'ISTÚRIZ', 'JAIME MIGUEL', '3'),('204', 'MATUTE', 'GARCÍA DE JALÓN', 'OSKAR', '16'),('205', 'MAYORAL', 'PERALES', 'RAFAEL', '5'),('206', 'MAZÓN', 'RAMOS', 'JOSÉ MARÍA', '21'),('207', 'MEDEL', 'PÉREZ', 'ROSA MARÍA', '5'),('208', 'MEIJÓN', 'COUSELO', 'GUILLERMO ANTONIO', '1'),('209', 'MENA', 'ARCA', 'JOAN', '6'),('210', 'MÉNDEZ', 'MONASTERIO', 'LOURDES', '4')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('211', 'MERINO', 'MARTÍNEZ', 'JAVIER', '3'),('212', 'MESTRE', 'BAREA', 'MANUEL', '4'),('213', 'MÍNGUEZ', 'GARCÍA', 'MONTSE', '2'),('214', 'MIQUEL', 'i VALENTÍ', 'SERGI', '10'),('215', 'MONEO', 'DÍEZ', 'MARÍA SANDRA', '3'),('216', 'MONTERO', 'CUADRADO', 'MARÍA JESÚS', '1'),('217', 'MONTERO', 'GIL', 'IRENE MARÍA', '5'),('218', 'MONTESINOS', 'AGUAYO', 'PABLO', '3'),('219', 'MONTESINOS', 'DE MIGUEL', 'MACARENA', '3'),('220', 'MORALEJA', 'GÓMEZ', 'TRISTANA MARÍA', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('221', 'MORO', 'ALMARAZ', 'MARÍA JESÚS', '3'),('222', 'MOVELLÁN', 'LOMBILLA', 'DIEGO', '3'),('223', 'MUÑOZ', 'DALDA', 'LUCÍA', '5'),('224', 'MUÑOZ', 'VIDAL', 'MARÍA', '14'),('225', 'NARVÁEZ', 'BANDERA', 'MARÍA DOLORES', '1'),('226', 'NASARRE', 'OLIVA', 'BEGOÑA', '1'),('227', 'NAVALPOTRO', 'GÓMEZ', 'JULIO', '1'),('228', 'NAVARRO', 'LACOBA', 'CARMEN', '3'),('229', 'NAVARRO', 'LÓPEZ', 'PEDRO', '3'),('230', 'NEVADO', 'DEL CAMPO', 'MARÍA MAGDALENA', '4'
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('231', 'NOGUERAS', 'i CAMERO', 'MIRIAM', '10'),('232', 'NUET', 'PUJALS', 'JOAN JOSEP', '9'),('233', 'OLANO', 'VELA', 'JAIME EDUARDO', '3'),('234', 'OLONA', 'CHOCLÁN', 'MACARENA', '4'),('235', 'OROMAS', 'GONZÁLEZ-MORO', 'ANA MARÍA', '19'),('236', 'ORIA', 'LÓPEZ', 'MARÍA INMACULADA', '1'),('237', 'ORTEGA', 'DOMÍNGUEZ', 'JOSÉ RAMÓN', '1'),('238', 'ORTEGA', 'SMITH-MOLINA', 'FRANCISCO JAVIER', '4'),('239', 'ORTIZ', 'GALVÁN', 'JOSÉ', '3'),('240', 'PADILLA', 'RUIZ', 'ESTHER', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('241', 'PANIAGUA', 'NUÑEZ', 'MIGUEL ÁNGEL', '3'),('242', 'PASTOR', 'JULIÁN', 'ANA MARÍA', '3'),('243', 'PEDRAJA', 'SÁINZ', 'RAQUEL', '1'),('244', 'PEDREÑO', 'MOLLINA', 'JUAN LUIS', '3'),('245', 'PEÑA', 'CAMARERO', 'ESTHER', '1'),('246', 'PEREA', 'i CONILLAS', 'MARÍA MERCÈ', '2'),('247', 'PÉREZ', 'ABELLÁS', 'ADOLFO', '1'),('248', 'PÉREZ', 'DÍAZ', 'MARÍA AUXILIADORA', '3'),('249', 'PÍRIZ', 'MAYA', 'VICTOR VALENTÍN', '3'),('250', 'PISARELLO', 'PRADOS', 'GERARDO', '6')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('251', 'PITA', 'CÁRDENES', 'MARÍA DEL CARMEN', '5'),('252', 'PONS', 'SAMPIETRO', 'PERE JOAN', '1'),('253', 'POSTIGO', 'QUINTANA', 'JESÚS', '3'),('254', 'POZUETA', 'FERNÁNDEZ', 'ISABEL', '16'),('255', 'PRIETO', 'NIETO', 'ANA', '1'),('256', 'PROHENS', 'RIGO', 'MARGARITA', '3'),('257', 'PUJOL', 'i FARRÉ', 'NORMA', '8'),('258', 'QUEVEDO', 'ITURBE', 'PEDRO', '20'),('259', 'RAMALLO', 'VÁZQUEZ', 'MARÍA PILAR', '3'),('260', 'RAMÍREZ', 'CARNER', 'ARNAU', '2')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('261', 'RAMÍREZ', 'DEL RÍO', 'JOSÉ', '4'),('262', 'RAMÓN', 'UTRABO', 'ELVIRA', '1'),('263', 'RAMOS', 'ESTEBAN', 'DESAR JOAQUÍN', '1'),('264', 'RAMOS', 'RODRÍGUEZ', 'JOSÉ LUIS', '1'),('265', 'RAYA', 'RODRÍGUEZ', 'MARÍA TAMARA', '1'),('266', 'REDONDO', 'CALVILLO', 'MARÍA DE LA O', '3'),('267', 'REGO', 'CANDAMIL', 'NÉSTOR', '13'),('268', 'RENAU', 'MARTÍNEZ', 'GERMÁN', '1'),('269', 'REQUEJO', 'NOVOA', 'PEDRO JESÚS', '4'),('270', 'REQUENA', 'RUIZ', 'JUAN DIEGO', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('271', 'RIOLOBOS', 'REGADERA', 'CARMEN', '3'),('272', 'ROBLES', 'LÓPEZ', 'JOAQUÍN', '4'),('273', 'RODRÍGUEZ', 'ALMEIDA', 'ANDRÉS ALBERTO', '4'),('274', 'RODRÍGUEZ', 'GÓMEZ', 'PABLO ALFONSO', '1'),('275', 'RODRÍGUEZ', 'GÓMEZ DE CELIS', 'MARÍA PILAR', '1'),('276', 'RODRÍGUEZ', 'HERRER', 'MARÍA ELVIRA', '3'),('277', 'RODRÍGUEZ', 'RODRÍGUEZ', 'ALBERTO', '5'),('278', 'RODRÍGUEZ', 'SALAS', 'JOSÉ ANTONIO', '1'),('279', 'ROJAS', 'GARCÍA', 'CARLOS', '3'),('280', 'ROMERO', 'HERNÁNDEZ', 'CARMELO', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('281', 'ROMERO', 'SÁNCHEZ', 'ROSA MARÍA', '3'),('282', 'ROMERO', 'VILCHES', 'MARÍA DE LOS REYES', '4'),('283', 'ROS', 'MARTÍNEZ', 'SUSANA', '1'),('284', 'ROSETY', 'FERNÁNDEZ DE CASTRO', 'AGUSTÍN', '4'),('285', 'ROSIQUE', 'i SALTOR', 'MARTA', '8'),('286', 'RUEDA', 'PERELLÓ', 'PATRICIA', '4'),('287', 'RUFIÁN', 'ROMERO', 'GABRIEL', '8'),('288', 'RUIZ DE PINEDO', 'UNDIANO', 'IÑAKI', '16'),('289', 'RUIZ', 'i CARBONELL', 'JOAN', '2'),('290', 'RUIZ', 'NAVARRO', 'EDUARDO LUIS', '4')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('291', 'RUIZ', 'SOLÁS', 'MARÍA DE LA CABEZA', '4'),('292', 'SAAVEDRA', 'MUÑOZ', 'MARISA', '5'),('293', 'SABANÉS', 'NADAL', 'INÉS', '11'),('294', 'SÁEZ', 'ALONSO-MUNUMEL', 'PABLO', '4'),('295', 'SAGASTIZABAL', 'UNZETABARRENETXEA', 'IDOIA', '15'),('296', 'SAHUQUILLO', 'GARCÍA', 'LUIS CARLOS', '1'),('297', 'SALVÁ', 'VERD', 'ANTONIO', '4'),('298', 'SALVADOR', 'i DUCH', 'JORDI', '8'),('299', 'SÁNCHEZ', 'DEL REAL', 'VICTOR MANUEL', '4'),('300', 'SÁNCHEZ', 'ESCOBAR', 'MARIANO', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('301', 'SÁNCHEZ', 'GARCÍA', 'JOSÉ MARÍA', '4'),('302', 'SANCHEZ', 'JÓDAR', 'MARISOL', '1'),('303', 'SÁNCHEZ', 'PÉREZ', 'CÉSAR', '3'),('304', 'SÁNCHEZ', 'PÉREZ-CASTEJON', 'PEDRO', '1'),('305', 'SÁNCHEZ', 'SERNA', 'JAVIER', '5'),('306', 'SANCHO', 'GUARDIA', 'ALFREDO', '1'),('307', 'SANCHO', 'ÍNIGUEZ', 'HERMINIO RUFINO', '1'),('308', 'SANTAMRÍA', 'RUIZ', 'LUIS', '3'),('309', 'SANTIAGO', 'ROMERO', 'ENRIQUE FERNANDO', '5'),('310', 'SARRIÀ', 'MORELL', 'VICENT MANUEL', '1')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('311', 'SAYAS', 'LÓPEZ', 'SERGIO', '18'),('312', 'SENDEROS', 'ORAÁ', 'DANIEL', '1'),('313', 'SERRADA', 'PARIENTE', 'DAVID', '1'),('314', 'SERRANO', 'MARTÍNEZ', 'JUAN FRANCISCO', '1'),('315', 'SEVA', 'RUIZ', 'YOLANDA', '1'),('316', 'SICILIA', 'ALFÉREZ', 'FELIPE JESÚS', '1'),('317', 'SIMANCAS', 'SIMANCAS', 'RAFAEL', '1'),('318', 'SOLER', 'MUR', 'ALEJANDRO', '1'),('319', 'SOTO', 'BURILLO', 'JUAN LUIS', '1'),('320', 'STEEGMANN', 'OLMEDILLAS', 'JUAN LUIS', '4')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('321', 'SUÁREZ', 'ILLANA', 'ADOLFO', '3'),('322', 'SUÁREZ', 'LAMATA', 'ELOY', '3'),('323', 'SUMELZO', 'JORDÁN', 'SUSANA', '1'),('324', 'TAIBO', 'MONELOS', 'DIEGO', '1'),('325', 'TELECHA', 'i LOZANO', 'CAROLINA', '8'),('326', 'TIRADO', 'OCHOA', 'VICENTE', '3'),('327', 'TIZÓN', 'VÁZQUEZ', 'UXÍA', '1'),('328', 'TOSCANO', 'DE BALBÍN', 'CARLA', '4'),('329', 'TRÍAS', 'GIL', 'GEORGINA', '4'),('330', 'URIARTE', 'BENGOECHEA', 'EDURNE', '3')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('331', 'URIARTE', 'TORREALDAY', 'ROBERTO', '5'),('332', 'UTRILLA', 'CANO', 'JULIO', '4'),('333', 'VALERIO', 'CORDERO', 'MAGDALENA', '1'),('334', 'VALLUGERA', 'BALAÑÀ', 'PILAR', '8'),('335', 'VÁZQUEZ', 'BLANCO', 'ANA BELÉN', '3'),('336', 'VEGA', 'ARIAS', 'RUBÉN DARÍO', '4'),('337', 'VEHÍ', 'CANTENYS', 'MIREIA', '17'),('338', 'VELARDE', 'GÓMEZ', 'MARTINA', '5'),('339', 'VELASCO', 'MORILLLO', 'ELVIRA', '3'),('340', 'VERA', 'RUIZ-HERRERA', 'NOELIA', '5')
+INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, PARTIDO_ID) VALUES ('341', 'VICENTE', 'VIONDI', 'DANIEL', '1'),('342', 'VIDAL', 'SÁEZ', 'AINA', '6'),('343', 'VILCHES', 'RUIZ', 'MARÍA LUISA', '1'),('344', 'VILLAGRASA', 'QUERO', 'NOEMÍ', '1'),('345', 'ZAMARRÓN', 'MORENO', 'AGUSTÍN', '1'),('346', 'ZAMBRANO', 'GARCÍA-RAEZ', 'CARLOS JOSÉ', '4'),('347', 'ZARAGOZA', 'ALONSO', 'JOSÉ', '2'),('348', 'ZURITA', 'EXPÓSITO', 'ANA MARÍA', '3'),('349', 'BATET', 'LAMAÑA', 'MERITXELL', '2'),('350', 'ELORZA', 'GONZÁLEZ', 'EDÓN', '1')
 
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('11', 'ALONSO', 'SUï¿½REZ', 'MARï¿½A OLGA', 'FAVOR', 1),
-('12', 'ALONSO-CUEVILLAS', 'i SAYROL', 'JAUME', 'FAVOR', 2),
-('13', 'ï¿½LVAREZ DE TOLEDO', 'PERALTA-RAMOS', 'CAYETANA', 'FAVOR', 1),
-('14', 'ï¿½LVAREZ', 'FANJUL', 'BEATRIZ', 'FAVOR', 1),
-('15', 'ANDRï¿½S', 'Aï¿½ï¿½N', 'CARMEN', 'FAVOR', 1),
-('16', 'ANDRï¿½S', 'BAREA', 'JOSEFA', 'FAVOR', 1),
-('17', 'ANGUITA', 'Pï¿½REZ', 'OMAR', 'FAVOR', 1),
-('18', 'ï¿½NGULO', 'ROMERO', 'MARï¿½A TERESA', 'FAVOR', 1),
-('19', 'ANTï¿½N', 'CACHO', 'JAVIER', 'FAVOR', 1),
-('20', 'ARAGONï¿½S', 'MENDIGUCHï¿½A', 'CARLOS', 'FAVOR', 1)
 
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('21', 'ARANDA', 'VARGAS', 'FRANCISCO', 'FAVOR', 1),
-('22', 'ARAUJO', 'MORALES', 'GEMMA', 'FAVOR', 2),
-('23', 'ARRIBAS', 'MAROTO', 'MANUEL', 'FAVOR', 1),
-('24', 'ARRIMADAS', 'GARCï¿½A', 'INï¿½S', 'FAVOR', 1),
-('25', 'ASARTA', 'CUEVAS', 'ALBERTO', 'FAVOR', 1),
-('26', 'ASENS', 'LLODRï¿½', 'JAUME', 'FAVOR', 1),
-('27', 'ASORï¿½N', 'SALAR', 'Lï¿½ZARO', 'FAVOR', 1),
-('28', 'BAL', 'FRANCï¿½S', 'EDMUNDO', 'FAVOR', 1),
-('29', 'BALDOVï¿½', 'RODA', 'JOAN', 'FAVOR', 1),
-('30', 'BAï¿½OS', 'RUIZ', 'CARMEN', 'FAVOR', 1)
 
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('31', 'BARANDIARAN', 'BENITO', 'Iï¿½IGO', 'FAVOR', 1),
-('32', 'BAS', 'CORUGEIRA', 'JAVIER', 'FAVOR', 2),
-('33', 'BASSA', 'COLL', 'MONTSERRAT', 'FAVOR', 1),
-('34', 'BEL', 'ACCENSI', 'FERRAN', 'FAVOR', 1),
-('35', 'BELARRA', 'URTEAGA', 'IONE', 'FAVOR', 1),
-('36', 'BELTRï¿½N', 'VILLALBA', 'ANA MARï¿½A', 'FAVOR', 1),
-('37', 'BERJA', 'VEGA', 'LAURA', 'FAVOR', 1),
-('38', 'BERMï¿½DEZ DE CASTRO', 'FERNï¿½NDEZ', 'JOSï¿½ ANTONIO', 'FAVOR', 1),
-('39', 'BETORET', 'COLL', 'VICENTE', 'FAVOR', 1),
-('40', 'BLANQUEAR', 'ï¿½LCARAZ', 'PATRICIA', 'FAVOR', 1)
 
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('41', 'BOADELLA', 'ESTEVE', 'GENï¿½S', 'FAVOR', 1),
-('42', 'BORRï¿½S', 'CASTANYER', 'LAURA', 'FAVOR', 2),
-('43', 'BORRï¿½S', 'PABï¿½N', 'MIREIA', 'FAVOR', 1),
-('44', 'BORREGO', 'CORTï¿½S', 'ISABEL MARï¿½A', 'FAVOR', 1),
-('45', 'BOTELLA', 'Gï¿½MEZ', 'ANA MARï¿½A', 'FAVOR', 1),
-('46', 'BOTRAN', 'PAHISSA', 'ALBERT', 'FAVOR', 1),
-('47', 'BRAVO', 'BARCO', 'EVA', 'FAVOR', 1),
-('48', 'BUENO', 'CAMPANARIO', 'EVA PATRICIA', 'FAVOR', 1),
-('49', 'CABALLERO', 'GUTIï¿½RREZ', 'HELENA', 'FAVOR', 1),
-('50', 'CABEZï¿½N', 'CASAS', 'TOMï¿½S', 'FAVOR', 1)
 
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('51', 'CALLEJAS', 'CANO', 'JUAN ANTONIO', 'FAVOR', 1),
-('52', 'CALVO', 'LISTE', 'PABLO JUAN', 'FAVOR', 2),
-('53', 'CALVO', 'POYATO', 'CARMEN', 'FAVOR', 1),
-('54', 'CAMBRONERO', 'PIQUERAS', 'PABLO', 'FAVOR', 1),
-('55', 'CAï¿½ADELL', 'SALVIA', 'CONCEP', 'FAVOR', 1),
-('56', 'CANALES', 'DUQUE', 'MARIANA DE GRACIA', 'FAVOR', 1),
-('57', 'CANCELA', 'RODRï¿½GUEZ', 'PILAR', 'FAVOR', 1),
-('58', 'CAï¿½IZARES', 'PACHECO', 'INï¿½S MARï¿½A', 'FAVOR', 1),
-('59', 'CANTERA', 'DE CASTRO', 'ZAIDA', 'FAVOR', 1),
-('60', 'CAPDEVILA', 'i ESTEVE', 'JOAN', 'FAVOR', 1)
 
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('61', 'CARAZO', 'HERMOSO', 'EDUARDO', 'FAVOR', 1),
-('62', 'CARCEDO', 'ROCES', 'MARï¿½A LUISA', 'FAVOR', 2),
-('63', 'CARRILLO', 'DE LOS REYES', 'BEATRIZ MICAELA', 'FAVOR', 1),
-('64', 'CARVALHO', 'DANTAS', 'MARï¿½A', 'FAVOR', 1),
-('65', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('66', 'CASARES', 'HONTAï¿½ï¿½N', 'PEDRO', 'FAVOR', 1),
-('67', 'CASERO', 'ï¿½VILA', 'ALBERTO', 'FAVOR', 1),
-('68', 'CASTELLï¿½N', 'RUBIO', 'MIGUEL ï¿½NGEL', 'FAVOR', 1),
-('69', 'CASTILLO ', 'Lï¿½PEZ', 'ELENA', 'FAVOR', 1),
-('70', 'CERDï¿½N', 'LEï¿½N', 'SANTOS', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES
-('71', 'CERQUEIRO', 'GONZï¿½LEZ', 'JAVIER', 'FAVOR', 1),
-('72', 'CHAMORRO', 'DELMO', 'RICARDO', 'FAVOR', 2),
-('73', 'CLAVELL', 'Lï¿½PEZ', 'ï¿½SCAR', 'FAVOR', 1),
-('74', 'CONTRERAS', 'PELï¿½EZ', 'FRANCISCO JOSï¿½', 'FAVOR', 1),
-('75', 'CORTï¿½S', 'CARBALLO', 'MARIO', 'FAVOR', 1),
-('76', 'CORTï¿½S', 'Gï¿½MEZ', 'ISMAEL', 'FAVOR', 1),
-('77', 'CRESPï¿½N', 'RUBIO', 'RAFAELA', 'FAVOR', 1),
-('78', 'CRUZ-GUZMï¿½N', 'GARCï¿½A', 'MARï¿½A SOLEDAD', 'FAVOR', 1),
-('79', 'CUATRECASAS', 'ASUA', 'JUAN', 'FAVOR', 1),
-('80', 'DE LAS HERAS', 'FERNï¿½NDEZ', 'PATRICIA', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES
-('81', 'DE LUNA', 'TOBARRA', 'LLANOS', 'FAVOR', 1),
-('82', 'DE MEER', 'Mï¿½NDEZ', 'ROCï¿½O', 'FAVOR', 2),
-('83', 'DE QUINTO', 'ROMERO', 'MARCOS', 'FAVOR', 1),
-('84', 'DEL VALLE', 'DE ISCAR', 'JULIO', 'FAVOR', 1),
-('85', 'DEL VALLE', 'RODRï¿½GUEZ', 'EMILIO JESï¿½S', 'FAVOR', 1),
-('86', 'DELGADO', 'ARCE', 'CELSO LUIS', 'FAVOR', 1),
-('87', 'Dï¿½AZ', 'Gï¿½MEZ', 'GUILLERMO', 'FAVOR', 1),
-('88', 'Dï¿½AZ', 'Pï¿½REZ', 'YOLANDA', 'FAVOR', 1),
-('89', 'DIOUF', 'DIOH', 'LUC ANDRE', 'FAVOR', 1),
-('90', 'DURï¿½N', 'PERALTA', 'JOSï¿½ CARLOS', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('91', 'ECHï¿½NIZ', 'SALGADO', 'JOSï¿½ IGNACIO', 'FAVOR', 1),
-('92', 'ECHENIQUE', 'ROBBA', 'PABLO', 'FAVOR', 2),
-('93', 'ELIZO', 'SERRANO', 'ODï¿½N', 'FAVOR', 1),
-('94', 'EITJA', 'CIURï¿½', 'FRANCESC XAVIER', 'FAVOR', 1),
-('95', 'ERREJï¿½N GALVï¿½N', 'Iï¿½IGO', 'PABLO', 'FAVOR', 1),
-('96', 'ESPAï¿½A', 'REINA', 'CAROLINA', 'FAVOR', 1),
-('97', 'ESPEJO-SAAVEDRA', 'CONESA', 'JOSï¿½ MARï¿½A', 'FAVOR', 1),
-('98', 'ESPINOSA DE LOS MONTEROS', 'DE SIMï¿½N', 'IVï¿½N', 'FAVOR', 1),
-('99', 'ESTEBAN', 'BRAVO', 'AITOR', 'FAVOR', 1),
-('100', 'ESTEBAN', 'CALONJE', 'CRISTINA ALICIA', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('101', 'FAGï¿½NDEZ', 'CAMPO', 'ANTIDIO', 'FAVOR', 1),
-('102', 'FANECA', 'Lï¿½PEZ', 'MARï¿½A LUISA', 'FAVOR', 2),
-('103', 'FERNï¿½NDEZ', 'BENï¿½ITEZ', 'ANDREA', 'FAVOR', 1),
-('104', 'FERNï¿½NDEZ', 'CASERO', 'ANA BELï¿½N', 'FAVOR', 1),
-('105', 'FERNï¿½NDEZ', 'CASTAï¿½ï¿½N', 'SOFï¿½A', 'FAVOR', 1),
-('106', 'FERNï¿½NDEZ', 'HERNï¿½NDEZ', 'PEDRO', 'FAVOR', 1),
-('107', 'FERNï¿½NDEZ', 'Rï¿½OS', 'TOMï¿½S', 'FAVOR', 1),
-('108', 'FERNï¿½NDEZ-LOMANA', 'GUTIï¿½RREZ', 'RAFAEL', 'FAVOR', 1),
-('109', 'FERNï¿½NDEZ-ROCA', 'SUï¿½REZ', 'CARLOS HUGO', 'FAVOR', 1),
-('110', 'FERRER', 'TESORO', 'SONIA', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('111', 'FIGAREDO', 'ï¿½LVAREZ-SALA', 'JOSï¿½ MARï¿½A', 'FAVOR', 1),
-('112', 'FRANCO', 'CARMONA', 'ISABEL', 'FAVOR', 2),
-('113', 'FUENTES', 'CURBELO', 'JUAN BERNARDO', 'FAVOR', 1),
-('114', 'GAGO', 'BUGARï¿½N', 'DIEGO', 'FAVOR', 1),
-('115', 'GAMARRA', 'RUIZ-CLAVIJO', 'CONCEPCIï¿½N', 'FAVOR', 1),
-('116', 'GAMAZO', 'MICï¿½', 'ï¿½SCAR', 'FAVOR', 1),
-('117', 'GARCï¿½S', 'SAN AGUSTï¿½N', 'MARIO', 'FAVOR', 1),
-('118', 'GARCï¿½A', 'ADANERO', 'CARLOS', 'FAVOR', 1),
-('119', 'GARCï¿½A', 'CHAVARRï¿½A', 'MARï¿½A MONTSERRAT', 'FAVOR', 1),
-('120', 'GARCï¿½A', 'Dï¿½EZ', 'JOAQUï¿½N MARï¿½A', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('121', 'GARCï¿½A', 'EGEA', 'TEODORO', 'FAVOR', 1),
-('122', 'GARCï¿½A', 'Gï¿½MEZ', 'VALENTï¿½N', 'FAVOR', 2),
-('123', 'GARCï¿½A', 'Lï¿½PEZ', 'MARIBEL', 'FAVOR', 1),
-('124', 'GARCï¿½A', 'MORï¿½S', 'ROBERTO', 'FAVOR', 1),
-('125', 'GARCï¿½A', 'PUIG', 'MARï¿½A DEL MAR', 'FAVOR', 1),
-('126', 'GARCï¿½A', 'RODRï¿½GUEZ', 'ALICIA', 'FAVOR', 1),
-('127', 'GARCï¿½A', 'TEJERINA', 'ISABEL', 'FAVOR', 1),
-('128', 'GARCï¿½A-PELAYO', 'JURADO', 'MARï¿½A JOSï¿½', 'FAVOR', 1),
-('129', 'GARRIDO', 'GUTIï¿½RREZ', 'PILAR', 'FAVOR', 1),
-('130', 'GARRIGA', 'VAZ DE CONCICAO', 'IGNACIO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('131', 'GARZï¿½N', 'ESPINOSA', 'ALBERTO', 'FAVOR', 1),
-('132', 'Gï¿½ZQUEZ', 'COLLADO', 'PALOMA', 'FAVOR', 2),
-('133', 'GESTOSO', 'DE MIGUEL', 'LUIS', 'FAVOR', 1),
-('134', 'GIL', 'Lï¿½ZARO', 'IGNACIO', 'FAVOR', 1),
-('135', 'GIMï¿½NEZ', 'GIMï¿½NEZ', 'SARA', 'FAVOR', 1),
-('136', 'Gï¿½MEZ', 'HERNï¿½NDEZ', 'HECTOR', 'FAVOR', 1),
-('137', 'Gï¿½MEZ-REINO', 'VARELA', 'ANTONIO', 'FAVOR', 1),
-('138', 'GONZï¿½LEZ', 'CABALLERO', 'MIGUEL ï¿½NGEL', 'FAVOR', 1),
-('139', 'GONZï¿½LEZ', 'COELLO DE PORTUGAL', 'VICTOR', 'FAVOR', 1),
-('140', 'GONZï¿½LEZ', 'GUINDA', 'MARï¿½A DEL CARMEN', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('141', 'GONZï¿½LEZ', 'Pï¿½REZ', 'ARIGONA', 'FAVOR', 1),
-('142', 'GONZï¿½LEZ', 'RAMOS', 'MANUEL GABRIEL', 'FAVOR', 2),
-('143', 'GONZï¿½LEZ', 'TEROL', 'ANTONIO', 'FAVOR', 1),
-('144', 'GONZï¿½LEZ', 'Vï¿½ZQUEZ', 'MARTA', 'FAVOR', 1),
-('145', 'GOROSPE', 'ELEZCANO', 'JOSUNE', 'FAVOR', 1),
-('146', 'GRANOLLERS', 'CUNILLERA', 'INï¿½S', 'FAVOR', 1),
-('147', 'GUAITA', 'ESTERUELAS', 'SANDRA', 'FAVOR', 1),
-('148', 'GUERRA', 'Lï¿½PEZ', 'SONIA', 'FAVOR', 1),
-('149', 'GUIJARRO', 'CEBALLOS', 'MARï¿½A', 'FAVOR', 1),
-('150', 'GUIJARRO', 'GARCï¿½A', 'TXEMA', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('151', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('152', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('153', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('154', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('155', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('156', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('157', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('158', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('159', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('160', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('161', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('162', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('163', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('164', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('165', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('166', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('167', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('168', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('169', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('170', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('171', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('172', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('173', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('174', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('175', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('176', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('177', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('178', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('179', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('180', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('181', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('182', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('183', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('184', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('185', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('186', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('187', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('188', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('189', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('190', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('191', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('192', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('193', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('194', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('195', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('196', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('197', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('198', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('199', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('200', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('201', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('202', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('203', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('204', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('205', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('206', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('207', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('208', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('209', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('210', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('211', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('212', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('213', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('214', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('215', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('216', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('217', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('218', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('219', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('220', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('221', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('222', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('223', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('224', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('225', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('226', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('227', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('228', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('229', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('230', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('231', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('232', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('233', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('234', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('235', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('236', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('237', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('238', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('239', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('240', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('241', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('242', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('243', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('244', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('245', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('246', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('247', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('248', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('249', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('250', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('251', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('252', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('253', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('254', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('255', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('256', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('257', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('258', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('259', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('260', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('261', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('262', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('263', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('264', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('265', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('266', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('267', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('268', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('269', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('270', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('271', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('272', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('273', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('274', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('275', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('276', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('277', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('278', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('279', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('280', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('281', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('282', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('283', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('284', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('285', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('286', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('287', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('288', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('289', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('290', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('291', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('292', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('293', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('294', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('295', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('296', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('297', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('298', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('299', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('300', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('301', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('302', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('303', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('304', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('305', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('306', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('307', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('308', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('309', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('310', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('311', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('312', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('313', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('314', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('315', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('316', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('317', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('318', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('319', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('320', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('321', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('322', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('323', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('324', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('325', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('326', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('327', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('328', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('329', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('330', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('331', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('332', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('333', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('334', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('335', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('336', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('337', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('338', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('339', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('340', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
-
-INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES 
-('341', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('342', 'SANCHEZ', 'CASTEJï¿½N', 'PEDRO', 'FAVOR', 2),
-('343', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('344', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('345', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('346', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('347', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('348', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('349', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1),
-('350', 'CASADO', 'BLANCO', 'PABLO', 'FAVOR', 1)
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('1', 'En la Ley Orgánica 9/1985, aprobada el 5 de julio de 1985, se despenalizó el aborto inducido en tres supuestos: riesgo grave para la salud física o psíquica de la mujer embarazada (supuesto terapéutico), violación (supuesto criminológico) y malformaciones o taras, físicas o psíquicas, en el feto (supuesto eugenésico). De acuerdo con esta ley, la gestante podía interrumpir el embarazo en centros públicos o privados en las primeras 12 semanas en el caso criminológico, en las 22 primeras semanas en el eugenésico, y en cualquier momento del embarazo en el caso terapéutico. En los supuestos segundo y tercero, se requería un informe médico que certificara el cumplimiento de las condiciones establecidas por la ley; en los casos de violación, era preciso cursar previamente la pertinente denuncia policial. En estos tres supuestos, no era punible el aborto practicado por un médico, o bajo su dirección, en un centro sanitario acreditado para hacer interrupciones voluntarias del embarazo, ya sea público o privado, con el consentimiento expreso de la mujer. En los demás casos, el Código Penal establecía diversas penas de prisión tanto para la mujer embarazada como para los facultativos que practicaran abortos no amparados por la ley.', '1985-07-05', 'LEGISLACIÓN SOBRE EL ABORTO INDUCIDO', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('2', 'El Gobierno del PSOE presentó un anteproyecto de ley que establecía un cuarto supuesto: cuando le supusiese un conflicto personal, familiar o social a la mujer. El Congreso aprobó el 14 de diciembre de 1995, por mayoría absoluta, el proyecto de ley de ampliación del aborto para introducir el cuarto supuesto, pero la convocatoria anticipada de elecciones evitó el debate en el Senado. La Mesa del Congreso impidió, con los votos del PP y CiU, la celebración de un pleno extraordinario para adelantar el debate. Tras la victoria del PP en 1996, la ley no registró modificaciones hasta la vuelta del PSOE al Gobierno.', '1995-12-14', 'LEGISLACIÓN SOBRE EL ABORTO INDUCIDO', 'NO APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('3', 'En 2009 se tramitó la reforma de la ley de 1985 que regulaba la interrupción voluntaria del embarazo en tres supuestos delimitados por una nueva ley en la que se permitiría, en cualquier circunstancia, durante las 14 primeras semanas de gestación, y, hasta la semana 22, en caso de que exista grave riesgo para la vida o la salud de la embarazada o riesgo de graves anomalías para el feto. En caso de que se detecten anomalías fetales incompatibles con la vida no hay límite temporal para abortar. La nueva ley permitirá también a las jóvenes de 16 y 17 abortar sin necesitar la autorización de sus padres.Esta reforma, apoyada por el Partido Socialista Obrero Español y avalada por el Consejo de Estado, recibió críticas del Partido Popular, de la Iglesia católica y de grupos antiabortistas. La Ley 2/2010 de salud sexual y reproductiva y de la interrupción voluntaria del embarazo finalmente fue aprobada por 184 votos a favor, 158 en contra y una abstención. Apoyaron la ley el PSOE, partido en el Gobierno de España presidido por José Luis Rodríguez Zapatero, con la Ministra de Igualdad Bibiana Aído. Los partidos que apoyaron al Gobierno fueron el PNV, ERC, IU, ICV, BNG, NaBai y dos diputados de CiU. El Partido Popular fue el único partido que se opuso en bloque a la aprobación de la nueva ley. También se opusieron algunos miembros de otros partidos como Coalición Canaria, UPN, UPyD y siete diputados de CiU. Fuera del parlamento, organizaciones de la sociedad civil también mostraron su rechazo: representantes de la Conferencia Episcopal Española de la Iglesia católica, asociaciones provida y el Instituto de Política Familiar (IPF). En 2008 un sondeo sobre la juventud española realizado por el Centro de Investigaciones Sociológicas por encargo del Instituto de la Juventud indicó que un 55% de los jóvenes consideraba que era únicamente la mujer la que debía decidir sobre el tema; uno de cada cuatro consideraba que la sociedad debe poner ciertos límites; mientras que un 16% se manifestaba en contra del aborto en todos los casos.', '2010-03-03', 'LEGISLACIÓN SOBRE EL ABORTO INDUCIDO', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('4', 'Alberto Ruiz Gallardón, Ministro de Justicia del gobierno del Partido Popular presidido por Mariano Rajoy anunció en su primera comparecencia parlamentaria en enero de 2012, poco después de haber tomado posesión de su cargo, su intención de reformar la Ley del Aborto aprobada por el Gobierno socialista de Rodríguez Zapatero (Gobierno Zapatero II), que era una ley de plazos como la existente en la mayoría de los países europeos pero que fue muy contestada por la Iglesia católica y por el propio Partido Popular (especialmente en el tema de que las menores entre 16 y 18 años pudieran abortar aunque no tuvieran el consentimiento de sus padres), para volver al modelo de la ley de 1985, en la que las mujeres tenían que alegar motivos para justificar su decisión. El anteproyecto de Ley de Protección de la Vida del Concebido y los Derechos de la Mujer Embarazada, entre otras cosas, también cambiarían en esta reforma legal, como el paso del método de los plazos al de los supuestos, o la necesidad de informe médico para poder interrumpir el embarazo. Como protesta por el proyecto de reforma el 1 de febrero de 2014 se organizó en Madrid una masiva manifestación que se denominó El tren de la Libertad. El 23 de septiembre de 2014, el Ministro de Justicia Alberto Ruiz Gallardón anuncia su dimisión como Ministro tras la retirada del proyecto de Ley del Aborto por parte del ejecutivo de Mariano Rajoy. Finalmente, en 2015 el PP aprobó que las menores de edad de 16 y 17 años necesiten permiso paterno para poder abortar.', '2015-09-21', 'LEGISLACIÓN SOBRE EL ABORTO INDUCIDO', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('5', 'La Ley Orgánica por la que se regula el Estatuto de Centros Escolares, LOECE, fue una ley elaborada por el gobierno de UCD y publicada en el BOE en 1980. Trataba de desarrollar el artículo 27 de la Constitución desde una perspectiva conservadora. El PSOE la recurrió ante el Tribunal Constitucional, ya que entendía que no respetaba el espíritu y la letra de la Constitución, quien le dio la razón en bastantes de sus objeciones. La sentencia del TC de 13 de febrero de 1981 fue y sigue siendo muy importante para fijar los límites de las libertades en la enseñanza y el respeto al derecho a la educación. Tras esa sentencia, el gobierno de UCD hubiera debido revisar muy profundamente la LOECE para adecuarla a la sentencia o hacer una ley nueva, pero el intento del golpe de Estado del 23 de febrero de 1981, el cambio de Adolfo Suárez por Leopoldo Calvo Sotelo al frente del Gobierno y el triunfo electoral del PSOE en 1982 impidieron que eso se hiciese. En consecuencia, la LOECE nunca entró en vigor.', '1980-06-27', 'LEGISLACIÓN DE LA EDUACIÓN', 'NO APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('6', 'Conocida por sus siglas LODE, no es una ley que afecta a la estructura del sistema educativo, sino que regula la dualidad de centros docentes, la participación en la enseñanza de la comunidad educativa, el derecho a la educación y determina la dirección democrática, frente a la tecnocrática anterior. Su desarrollo más concreto en los temas citados consta en el RD 2376/1985. Este Decreto ha sido modificado parcialmente por los Reglamentos Orgánicos de Escuelas de Educación Infantil y de Colegios de Educación Primaria y de Institutos de Secundaria y por la Orden de 29 de junio de 1994 por la que se aprueban las instrucciones que regula la organización y funcionamiento de las Escuelas de Educación Infantil y de los Colegios de Educación Primaria. Ha sido reformada en casi su totalidad por la LOPEG (Ley Orgánica de 9/1995 de 20 de noviembre) de la evaluación, la participación y el gobierno de centros docentes.', '1985-07-03', 'LEGISLACIÓN DE LA EDUACIÓN', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('7', 'La Ley Orgánica General del Sistema Educativo (LOGSE), de 3 de octubre de 1990 (publicada en el BOE de 4 de octubre) ley educativa española, promulgada por el gobierno del PSOE y sustituyó a la Ley General de Educación de 1970, vigente desde la dictadura de Franco. Fue derogada por la Ley Orgánica de Educación (LOE), en el año 2006. Se ha dicho que la LOGSE supuso la puesta en marcha de un sistema educativo basado en los principios constitucionales e inició una gestión democrática de los centros. La ley fue la primera que estableció un sistema descentralizado de enseñanza en España al permitir que las comunidades autónomas no sólo gestionasen los centros educativos, sino que pudieran redactar un porcentaje muy importante de los contenidos curriculares. Se era consciente de la necesaria incorporación a postulados europeos y la necesidad de asumir un modelo más acorde a los nuevos cambios tecnológicos surgidos en educación. Así, se optó por potenciar un sistema de enseñanza de metodología constructivista con lo que se denominaba un modelo de currículo abierto y flexible con diferentes niveles de concreción (Leyes estatales o autonómicas, centro, aula o incluso alumno en particular), y adaptando los contenidos a los conocimientos y esquemas psicológicos de los alumnos.', '1990-10-03', 'LEGISLACIÓN DE LA EDUACIÓN', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('8', 'La Ley Orgánica de Calidad de la Educación (LOCE) o Ley Orgánica 10/2002 fue una ley española promulgada el 23 de diciembre de 2002 por el segundo gobierno de José María Aznar (PP), siendo ministra Pilar del Castillo, y que pretendía reformar y mejorar la educación en España. No llegó a aplicarse. Tras la llegada a la presidencia del gobierno de Zapatero (PSOE) se paralizó el calendario de aplicación de la nueva ley por medio de un Real Decreto aprobado por el Consejo de Ministros del 28 de mayo de 2004. Finalmente, la Ley fue derogada el 24 de mayo de 2006 por la Ley Orgánica 2/2006, de 3 de mayo, de Educación, dando continuidad al sistema anterior (promulgado también por el PSOE).', '2002-12-23', 'LEGISLACIÓN DE LA EDUACIÓN', 'NO APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('9', 'La Ley Orgánica (LOE) 2/2006, de 3 de mayo, de Educación es una ley orgánica estatal aprobada el 6 de abril de 2006 en el Congreso de los Diputados. La ley regulaba las enseñanzas educativas en los diferentes tramos de edad de la educación en España en diferentes tramos de edades, vigente desde el curso académico 2006/07 hasta la actualidad. El 28 de noviembre de 2013, se modificó parcialmente con la aprobación de la LOMCE, la cual entró en vigor en el curso 2014/2015.', '2006-05-03', 'LEGISLACIÓN DE LA EDUACIÓN', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('10', 'La Ley Orgánica 8/2013, de 9 de diciembre, para la mejora de la calidad educativa (LOMCE), denominada popularmente como «ley Wert», es una ley del ordenamiento jurídico español con carácter de ley orgánica aprobada en el año 2013, que modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación (LOE), seis artículos y una disposición adicional de la Ley Orgánica 8/1985, de 3 de julio, reguladora del Derecho a la Educación (LODE). Desde la presentación del proyecto de ley el 17 de mayo de 2013 por el ministro de Educación, Cultura y Deporte del gobierno popular de Mariano Rajoy, José Ignacio Wert, hasta su aprobación definitiva por las Cortes Generales el 28 de noviembre, ha sido una ley muy contestada y controvertida por ciertos sectores sociales y políticos —de hecho, durante su tramitación en las Cortes, la ley no fue apoyada por ningún otro grupo parlamentario salvo el popular. Aunque una vez ya aprobada la LOMCE, UPN, que se abstuvo, y UPyD y FAC, que votaron en contra, rechazaron su derogación—.', '2013-12-09', 'LEGISLACIÓN DE LA EDUACIÓN', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('11', 'La Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD), fue una ley orgánica española que tenía por objeto garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y también los derechos fundamentales de las personas físicas, y especialmente de su honor, intimidad, privacidad personal y familiar. Fue aprobada por las Cortes Generales el 13 de diciembre de 1999 y derogada con la entrada en vigor, el 6 de diciembre de 2018, de la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales, que adapta la legislación española al Reglamento General de Protección de Datos de la Unión Europea. Esta ley se desarrolló en el artículo 18 de la constitución española de 1978, sobre el derecho a la intimidad familiar. Quedaban excluidas de esta normativa aquellos datos recogidos para uso doméstico, las materias clasificadas del estado y aquellos ficheros que recogen datos sobre terrorismo y otras formas de delincuencia organizada (no simple delincuencia). La Agencia Española de Protección de Datos, de ámbito estatal y creada en 1992, es la encargada de velar por el cumplimiento de esta Ley.', '1999-12-13', 'LEGISLACIÓN DE LA PROTECCIÓN DE DATOS', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('12', 'La Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPD-GDD) es una ley orgánica aprobada por las Cortes Generales de España que tiene por objeto adaptar el Derecho interno español al Reglamento General de Protección de Datos. Esta ley orgánica deroga a la anterior Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal (aunque se mantiene vigente para la regulación de ciertas actividades). Esta ley entró en vigor el 7 de diciembre de 2018.', '2018-12-05', 'LEGISLACIÓN DE LA PROTECCIÓN DE DATOS', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('13', 'La Prisión Permanente Revisable (PPR) es la máxima pena privativa de libertad en España. Fue aprobada en el Congreso de los Diputados el 26 de marzo de 2015, junto con la Ley de Seguridad Ciudadana, con el único apoyo del Partido Popular y en el contexto del Pacto antiyihadista. Entró en vigor el día 31 de ese mes. Según el Código Penal, la prisión permanente revisable es aplicable en los siguientes delitos: crímenes de lesa humanidad, el asesinato del rey de España o de un jefe de Estado extranjero que se halle en España, el asesinato cometido en el seno de una organización criminal o terrorista, el asesinato cometido tras la comisión de un delito contra la libertad sexual o el asesinato de una persona menor de dieciséis años. Así como al reo de asesinato condenado por la muerte de más de dos personas. Con una iniciativa del PNV que cuenta con el apoyo de varios grupos, el Congreso de los Diputados tramitó desde octubre de 2017 una proposición de ley que anula la figura de la prisión permanente revisable. Dicha proposición de ley fue tomada en consideración por el pleno del Congreso el 10 de octubre. Este apoyó de forma mayoritaria dicha proposición de ley con 162 votos a favor, 129 en contra y 31 abstenciones. A favor de la derogación se pronunciaron el PNV, el PSOE, Unidos Podemos y otros grupos como Compromís o Bildu. Ciudadanos optó por la abstención, aunque su portavoz, Patricia Reyes Rivera, criticó la prisión permanente revisable. La medida ya fue en su día recurrida por toda la oposición ante el Tribunal Constitucional. Algunos han señalado, sin embargo, la incoherencia de considerar inconstitucional la prisión permanente cuando España ha ratificado el Estatuto de la Corte Penal Internacional que recoge dicha pena. Precisamente el Consejo de Estado se pronunció sobre su constitucionalidad en relación con la ratificación por España de dicho Estatuto. Además, el Tribunal Europeo de Derechos Humanos de Estrasburgo considera que se trata de una pena ajustada al Convenio Europeo para la Protección de los Derechos Humanos y de las Libertades Fundamentales, que, a su vez, prohíbe las penas inhumanas. La aplicación de la prisión permanente revisable ha sido avalada por dicho tribunal en sus sentencias SSTEDH 12-2-2008 (Caso Kafkaris vs. Chipre) y 3-11-2009 (caso Meixner vs. Alemania), cuando la ley nacional ofrece la posibilidad de revisión de la condena de duración indeterminada con vistas a su conmutación, remisión, terminación o libertad condicional del penado. La prisión permanente está ya en la legislación penal de varios países europeos, tales como Francia, Alemania, Italia, Reino Unido, Bélgica, Dinamarca, Austria o Suiza.', '2015-03-26', 'LEGISLACIÓN DE LA PRISIÓN PERMANENTE REVISABLE', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('14', 'La Ley 14/1986, de 25 de abril, General de Sanidad es una ley promulgada el 25 de abril de 1986 por las Cortes Generales en la que se establece la regulación de las acciones encaminadas a la protección de la salud establecida en el artículo 43 de la Constitución española. En su Título III define a las prestaciones públicas y sus estructuras como un Sistema Nacional de Salud, con una organización de sus servicios establecida por las distintas comunidades autónomas. Se redactó durante la primera legislatura de gobierno socialista presidido por Felipe González y con Ernest Lluch como Ministro de Sanidad. La Ley General de Sanidad estableció un cambio de gran trascendencia en el modelo político de asistencia sanitaria, que pasó de un sistema de Seguridad Social financiado con las cuotas de trabajadores y empresarios a un sistema nacional de salud en el que se integraban todas las otras redes existentes y que pasó a financiarse a través de los presupuestos Generales del Estado de forma progresiva. Se estableció igualmente la universalidad de la asistencia sanitaria para todos los españoles. Como consecuencia de esta nueva concepción se pasó de un 77% de la población cubierta por la Seguridad Social en 1975 a un 95,5% cubierta por el sistema nacional de salud en 1995.', '1986-04-25', 'LEGISLACIÓN DE LA SANIDAD', 'APLICADA')
+INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('15', 'Tras el triunfo socialista en las elecciones y la formación del gobierno, y después de mucho debate, el 30 de junio de 2005 se aprobó la ley que modificaba el código civil y permitía el matrimonio entre personas del mismo sexo (y, como consecuencia de esto, otros derechos como la adopción conjunta, herencia y pensión). La ley fue publicada el 2 de julio de 2005, y el matrimonio entre personas del mismo sexo fue oficialmente legal en España el 3 de julio de 2005, siendo el tercer país en el mundo en legalizarlo. A pesar del apoyo del 66% de los españoles al matrimonio homosexual, la tramitación de esta ley se vio acompañada de movilizaciones sociales en contra, pero también a favor de la medida, que congregaron a miles de personas de toda España. Mientras que los partidarios de la medida estiman que la verdadera igualdad solo se consigue si se equiparan todas las parejas en una misma figura jurídica, el matrimonio, sus oponentes opinan que el término "matrimonio" debería reservarse a la unión de un hombre y una mujer. La Iglesia católica se opuso a esta ley, considerándola un ataque a la institución del matrimonio. Otras asociaciones también expresaron su preocupación sobre la posibilidad de que las personas homosexuales pudieran adoptar menores. Tras su aprobación, el Partido Popular presentó un recurso contra la ley en el Tribunal Constitucional, que se resolvió el 6 de noviembre de 2012, siete años después de su tramitación, con 8 votos a favor de la constitucionalidad del matrimonio homosexual y 3 en contra. Unas 4.500 parejas del mismo sexo contrajeron matrimonio en España durante el primer año de vigencia de la ley. Poco después de que la ley fuera aprobada, surgieron dudas sobre la situación legal del matrimonio con personas de países que no permiten el matrimonio entre personas del mismo sexo. Sobre esta cuestión, el Ministerio de Justicia español determinó que la ley española permite que un español se case con un extranjero —o que dos extranjeros que residan legalmente en España se casen entre sí—, incluso cuando las leyes nacionales de esos extranjeros no reconozcan los matrimonios entre personas del mismo sexo.', '2005-07-03', 'LEGISLACIÓN DEL MATRIMONIO ENTRE PERSONAS DEL MISMO SEXO', 'APLICADA')
 
 
 
@@ -433,7 +88,7 @@ INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO, PARTIDO_ID) VALUES
 
 
 
-INSERT INTO LEY (ID, DESCRIPCION, FECHA, NOMBRE, RESULTADO) VALUES ('1', 'ES UNA LEY MUY IMPORTANTE','1996-06-16', 'LEY DEL ABORTO', 'FAVOR'),('2', 'ES UNA LEY MENOS IMPORTANTE','1993-09-21', 'LEY DEL ABORTO2', 'FAVOR')
 
 
 
+	

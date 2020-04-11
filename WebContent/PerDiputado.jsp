@@ -1,11 +1,5 @@
 <form action="CreatePredictionPerDiputadoServlet">
-	<input type="hidden" name="ownUserId" value="${usuario.id}" /> <label
-		for="leyId">Seleccione la ley para la predicción:</label> <select
-		name="leyId" class="form-control optionSelection">
-		<c:forEach items="${leyes}" var="leyi">
-			<option value="${leyi.id}">${leyi.nombre}</option>
-		</c:forEach>
-	</select>
+<%@ include file = "LeyForm.jsp" %>
 
 <c:forEach items="${diputados}" var="diputadoi">
 	<label for="voto${diputado.id}">Voto de ${diputadoi.nombre}:</label>
