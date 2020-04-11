@@ -18,7 +18,7 @@
 						<c:forEach items="${prediccionesPag}" var="prediccioni">
 							<div class="predictionZone">
 								<a href="PredictionServlet?prediction=${prediccioni.id}">
-									Predicción creada por ${prediccioni.analista.name} sobre
+									Predicciï¿½n creada por ${prediccioni.analista.name} sobre
 									${prediccioni.ley.nombre} (${prediccioni.fecha})</a>
 								<c:choose>
 									<c:when test="${ not prediccioni.votacionesGrupo.isEmpty()}">
