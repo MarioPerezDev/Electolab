@@ -50,8 +50,12 @@ public class FormLoginServlet extends HttpServlet {
 			getServletContext().getRequestDispatcher("/Admin.jsp").forward(req,resp);
 		}else if ( null != usuario ) {
 			req.getSession().setAttribute("usuario", UsuarioDAOImplementation.getInstance().read(usuario.getId()));
-			req.getSession().setAttribute("active", "user");
+			try {
+			String active = req.getSession().getAttribute("active").toString();
+			getServletContext().getRequestDispatcher("/"+active+".jsp").forward(req,resp);
+			} catch(Exception e) {
 			getServletContext().getRequestDispatcher("/Usuario.jsp").forward(req,resp);
+			}
 		} else {
 			req.getSession().setAttribute("active", "index");
 			req.getSession().setAttribute("mensaje", "El correo electrónico o la contraseña son incorrectas.");

@@ -8,13 +8,14 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class GrupoParlamentario {
-	
+	private static long serialVersionUID = 1L;	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column
@@ -22,10 +23,16 @@ public class GrupoParlamentario {
 	@Column
 	private String nombre;
 	@Column
-	private String voto;
-	@Column
 	@OneToMany(mappedBy = "grupoParlamentario", fetch = FetchType.EAGER)
 	private Collection<Partido> partidosdelgrupo;
+	@OneToMany(mappedBy = "grupoParlamentario", fetch = FetchType.EAGER)
+	private Collection<VotacionPorGrupo> votaciones;
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+	public static void setSerialVersionUID(long serialVersionUID) {
+		GrupoParlamentario.serialVersionUID = serialVersionUID;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -38,24 +45,23 @@ public class GrupoParlamentario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getVoto() {
-		return voto;
-	}
-	public void setVoto(String voto) {
-		this.voto = voto;
-	}
 	public Collection<Partido> getPartidosdelgrupo() {
 		return partidosdelgrupo;
 	}
 	public void setPartidosdelgrupo(Collection<Partido> partidosdelgrupo) {
 		this.partidosdelgrupo = partidosdelgrupo;
 	}
+	public Collection<VotacionPorGrupo> getVotaciones() {
+		return votaciones;
+	}
+	public void setVotaciones(Collection<VotacionPorGrupo> votaciones) {
+		this.votaciones = votaciones;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
 	@Override
@@ -72,20 +78,17 @@ public class GrupoParlamentario {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "GrupoParlamentario [id=" + id + ", nombre=" + nombre + ", voto=" + voto + ", partidosdelgrupo="
-				+ partidosdelgrupo + "]";
+		return "GrupoParlamentario [id=" + id + ", nombre=" + nombre + ", partidosdelgrupo=" + partidosdelgrupo
+				+ ", votaciones=" + votaciones + "]";
 	}
 	public GrupoParlamentario() {
 		super();
 	}
+
+	
 	
 }

@@ -4,10 +4,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
-<%@ include file = "Head.jsp" %>
+<%@ include file="Head.jsp"%>
 <body>
-   <%@ include file = "Navbar.jsp" %>
-	<h1>Esta será la página de ${usuario.name}.</h1>
-	<%@ include file = "Variables.jsp" %>
+	<%@ include file="Navbar.jsp"%>
+	<div class="container">
+		<h1>Esta será la página de ${usuario.id}.</h1>
+
+	</div>
+	<%@ include file="Variables.jsp"%>
 </body>
 </html>

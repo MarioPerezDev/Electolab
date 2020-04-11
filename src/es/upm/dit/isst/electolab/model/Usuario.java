@@ -9,13 +9,17 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 @Entity
-@Table
+@Table(name="Usuario")
 public class Usuario implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column
@@ -33,61 +37,103 @@ public class Usuario implements Serializable {
 	@Column
 	@OneToMany(mappedBy = "analista", fetch = FetchType.EAGER)
 	private Collection<Prediccion> donePredicciones;
-	public static long getSerialversionuid() {
+
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@ManyToMany(mappedBy = "usuariosQueDieronLike")
+	private Collection<Prediccion> likedPredictions;
+	
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@ManyToMany(mappedBy = "usuariosQueDieronDislike")
+	private Collection<Prediccion> dislikedPredictions;
+
+	public static long getSerialVersionUID() {
 		return serialVersionUID;
+	}
+
+	public static void setSerialVersionUID(long serialVersionUID) {
+		Usuario.serialVersionUID = serialVersionUID;
 	}
 
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public boolean getAnalist() {
+
+	public boolean isAnalist() {
 		return analist;
 	}
+
 	public void setAnalist(boolean analist) {
 		this.analist = analist;
 	}
-	public boolean getAccepted() {
+
+	public boolean isAccepted() {
 		return accepted;
 	}
+
 	public void setAccepted(boolean accepted) {
 		this.accepted = accepted;
 	}
+
 	public Collection<Prediccion> getDonePredicciones() {
 		return donePredicciones;
 	}
+
 	public void setDonePredicciones(Collection<Prediccion> donePredicciones) {
 		this.donePredicciones = donePredicciones;
 	}
+
+	public Collection<Prediccion> getLikedPredictions() {
+		return likedPredictions;
+	}
+
+	public void setLikedPredictions(Collection<Prediccion> likedPredictions) {
+		this.likedPredictions = likedPredictions;
+	}
+
+	public Collection<Prediccion> getDislikedPredictions() {
+		return dislikedPredictions;
+	}
+
+	public void setDislikedPredictions(Collection<Prediccion> dislikedPredictions) {
+		this.dislikedPredictions = dislikedPredictions;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -97,33 +143,27 @@ public class Usuario implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Usuario other = (Usuario) obj;
-		if (email == null) {
-			if (other.email != null)
-				return false;
-		} else if (!email.equals(other.email))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", email=" + email + ", password=" + password + ", name=" + name + ", analist="
-				+ analist + ", accepted=" + accepted + ", donePredicciones=" + donePredicciones + "]";
+				+ analist + ", accepted=" + accepted + ", donePredicciones=" + donePredicciones + ", likedPredictions="
+				+ likedPredictions + ", dislikedPredictions=" + dislikedPredictions + "]";
 	}
+
 	public Usuario() {
 		super();
 	}
-
 	
-		
+	
+	
+	
 	
 }

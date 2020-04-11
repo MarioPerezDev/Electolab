@@ -33,18 +33,143 @@ a:hover {
 	margin: 3px;
 	margin-left: 0px;
 }
-.activo{
+
+.activo {
 	background-color: #30353A;
 	border-radius: 5px;
 }
-.activo a{
+
+.activo a {
 	color: #ff6600 !important;
 }
 
-.columna1{
+.columna1 {
 	background-color: red;
 }
 
-.columna2{
+.columna2 {
 	background-color: green;
+}
+
+.page-item.active .page-link {
+	background-color: #30353A;
+	border-color: #343a40;
+}
+
+.page-link {
+	color: #343a40;
+	border-color: #343a40;
+}
+
+.page-link:hover {
+	background-color: #343a40;
+	color: white;
+	border-color: white;
+}
+
+.likeform {
+	float: right;
+}
+
+.predictionZone {
+	margin: 10px;
+	margin-left: 0px;
+	padding: 5px;
+	min-height: 55px;
+	border: 2px solid #343a40;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.userLogedArea {
+	margin: 10px;
+	padding: 10px;
+	width: 100%;
+	border: 2px solid #343a40;
+	border-radius: 5px;
+	background-color: #343a40;
+	color: white;
+	border-radius: 5px;
+	border: 2px solid #343a40;
+}
+
+.userLogedAreaTitle {
+	color: #ff6600;
+}
+
+.votosFavor {
+	background-color: green;
+	padding: 8px;
+	color: white;
+	border: 2px solid #343a40;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.votosContra {
+	background-color: red;
+	padding: 8px;
+	color: white;
+	border-top: 2px solid #343a40;
+	border-bottom: 2px solid #343a40;
+}
+
+.abstenciones {
+	background-color: yellow;
+	padding: 8px;
+	border: 2px solid #343a40;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.mayoriaAbsoluta {
+	border: 2px solid #343a40;
+	font-size: 1.5em;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	max-width: 320px;
+	background-color: #44d362;
+	color: white;
+	-webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+}
+
+.mayoriaSimple {
+	border: 2px solid #343a40;
+	font-size: 1.5em;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	max-width: 320px;
+	background-color: #e6e6ca;
+	color: black;
+	-webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+}
+
+.rechazo {
+	border: 2px solid #343a40;
+	font-size: 1.5em;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	max-width: 320px;
+	background-color: #ff6961;
+	color: white;
+	-webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+}
+
+.typeSelection {
+	width: 20%;
+	margin-bottom: 20px;
+}
+
+.optionSelection {
+	width: 25%;
+	margin-bottom: 5px;
 }

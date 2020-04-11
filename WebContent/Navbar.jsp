@@ -34,7 +34,7 @@
 					<li class="nav-item" id="predictionsLink">
 				</c:otherwise>
 			</c:choose>
-			<a class="nav-link" href="NavigationServlet?infoLink=Predicciones">Predicciones</a>
+			<a class="nav-link" href="PaginationServlet?page=1">Predicciones</a>
 			</li>
 			<c:choose>
 				<c:when test="${ active == 'AboutUs'}">

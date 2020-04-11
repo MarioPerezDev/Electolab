@@ -1,16 +1,19 @@
 package es.upm.dit.isst.electolab.model;
 
 import java.sql.Date;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Ley {
-	
+	private static long serialVersionUID = 1L;
 	//Variables de la ley
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -24,16 +27,49 @@ public class Ley {
 	private Date fecha;
 	@Column
 	private String descripcion;
-	
-	
-	//Metodos de acceso
-	public Ley() {
-		super();
+	@OneToMany(mappedBy = "ley", fetch = FetchType.EAGER)
+	private Collection<Prediccion> predicciones;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
-	@Override
-	public String toString() {
-		return "Ley [id=" + id + ", resultado=" + resultado + ", nombre=" + nombre + ", fecha=" + fecha
-				+ ", descripcion=" + descripcion + "]";
+	public static void setSerialversionuid(long serialversionuid) {
+		serialVersionUID = serialversionuid;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getResultado() {
+		return resultado;
+	}
+	public void setResultado(String resultado) {
+		this.resultado = resultado;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	public Collection<Prediccion> getPredicciones() {
+		return predicciones;
+	}
+	public void setPredicciones(Collection<Prediccion> predicciones) {
+		this.predicciones = predicciones;
 	}
 	@Override
 	public int hashCode() {
@@ -58,36 +94,14 @@ public class Ley {
 			return false;
 		return true;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	@Override
+	public String toString() {
+		return "Ley [id=" + id + ", resultado=" + resultado + ", nombre=" + nombre + ", fecha=" + fecha
+				+ ", descripcion=" + descripcion + ", predicciones=" + predicciones + "]";
 	}
-	public void setResultado(String resultado) {
-		this.resultado = resultado;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	public Integer getId() {
-		return id;
-	}
-	public String getResultado() {
-		return resultado;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public Date getFecha() {
-		return fecha;
-	}
-	public String getDescripcion() {
-		return descripcion;
-	}
-
+	public Ley() {
+		super();
+	}	
+	
 	
 }

@@ -1,5 +1,8 @@
 package es.upm.dit.isst.electolab.dao;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -11,15 +14,15 @@ import es.upm.dit.isst.electolab.model.Prediccion;
 
 public class PrediccionDAOImplementation implements PrediccionDAO {
 
-	 private static  PrediccionDAOImplementation instancia = null;
-	  private PrediccionDAOImplementation() {
-	  }
+	private static  PrediccionDAOImplementation instancia = null;
+	private PrediccionDAOImplementation() {
+	}
 
-	  public static PrediccionDAOImplementation getInstance() {
-	    if( null == instancia ) 
-	      instancia = new PrediccionDAOImplementation();
-	    return instancia;
-	  }
+	public static PrediccionDAOImplementation getInstance() {
+		if( null == instancia ) 
+			instancia = new PrediccionDAOImplementation();
+		return instancia;
+	}
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -33,10 +36,10 @@ public class PrediccionDAOImplementation implements PrediccionDAO {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public Prediccion read(String email){
+	public Prediccion read(int id){
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
-		Prediccion prediccion = session.get(Prediccion.class, email);//Read
+		Prediccion prediccion = session.get(Prediccion.class, id);//Read
 		session.getTransaction().commit();
 		session.close();
 		return prediccion;
@@ -73,7 +76,4 @@ public class PrediccionDAOImplementation implements PrediccionDAO {
 		session.close();
 		return prediccions;
 	}
-
-
-
 }

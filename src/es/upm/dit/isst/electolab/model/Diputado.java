@@ -1,16 +1,22 @@
 package es.upm.dit.isst.electolab.model;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class Diputado {
+	private static long serialVersionUID = 1L;	
 	//INSERT INTO DIPUTADO (ID, APELLIDO1, APELLIDO2, NOMBRE, VOTO)
 	//VALUES ('2', 'CASADO', 'CASTEJÓN', 'PABLO', 'CONTRA')
 	//Variables que tendrá diputado
@@ -24,10 +30,16 @@ public class Diputado {
 	private String apellido1;
 	@Column
 	private String apellido2;
-	@Column
-	private String voto;
 	@ManyToOne
 	private Partido partido;
+	@OneToMany(mappedBy = "diputado", fetch = FetchType.EAGER)
+	private Collection<VotacionPorDiputado> votaciones;
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+	public static void setSerialVersionUID(long serialVersionUID) {
+		Diputado.serialVersionUID = serialVersionUID;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -52,17 +64,17 @@ public class Diputado {
 	public void setApellido2(String apellido2) {
 		this.apellido2 = apellido2;
 	}
-	public String getVoto() {
-		return voto;
-	}
-	public void setVoto(String voto) {
-		this.voto = voto;
-	}
 	public Partido getPartido() {
 		return partido;
 	}
 	public void setPartido(Partido partido) {
 		this.partido = partido;
+	}
+	public Collection<VotacionPorDiputado> getVotaciones() {
+		return votaciones;
+	}
+	public void setVotaciones(Collection<VotacionPorDiputado> votaciones) {
+		this.votaciones = votaciones;
 	}
 	@Override
 	public int hashCode() {
@@ -90,10 +102,12 @@ public class Diputado {
 	@Override
 	public String toString() {
 		return "Diputado [id=" + id + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2
-				+ ", voto=" + voto + ", partido=" + partido + "]";
+				+ ", partido=" + partido + ", votaciones=" + votaciones + "]";
 	}
 	public Diputado() {
 		super();
-	}	
+	}
+
+	
 	
 }

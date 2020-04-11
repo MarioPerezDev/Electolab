@@ -9,9 +9,7 @@
  	<%@ include file = "Navbar.jsp" %>
  	<div class="container"> 
 		<h1>Esta será la página de Información.</h1>
-		
-		Esto es una prueba de las que le gustan a mario.
-		
+		    <!-- Información sobre los diputados -->
 	<%@ include file = "InfoDiputados.jsp" %>
 	</div>
 	<%@ include file = "Variables.jsp" %>
