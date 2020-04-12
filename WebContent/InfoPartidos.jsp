@@ -13,17 +13,17 @@
 		<div class="row">
 			<div class="col-6">
 				<img width="500" height="300"
-					src="https://image.shutterstock.com/image-photo/raising-hands-participation-600w-676447282.jpg">
+					src="${partido.logo}">
 			</div>
 			<div class="col-6">
 
 				<h2>Información del ${partido.nombre}</h2>
-				
 
+				
 			</div>
 
 		</div>
 		<p>${partido.descripcion}</p>
-		<P>PONER NUEVO ATRIBUTO DE PARTIDO QUE SEA "FOTO" O ALGO ASÍ. lA IMAGEN QUE SE MUESTRE SEA SACADA DE LA BBDD.</P>
+		
 	</div>
 </body>

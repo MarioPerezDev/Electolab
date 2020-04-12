@@ -25,7 +25,7 @@
 					<thead>
 						<tr>
 							<td><c:forEach items="${partidos}" var="partidoi">
-									<c:if test="${partidoi.id < 12 || partdidoi.id > 1}">
+									<c:if test="${partidoi.id <= 12 || partdidoi.id > 1}">
 										<div>
 											<a href="InfoPartidosServlet"><div align=center>${partidoi.siglas}</div></a>
 											<div class="text-center">
@@ -44,7 +44,7 @@
 										<div>
 											<a href="InfoPartidosServlet"><div align=center>${partidoi.siglas}</div></a>
 											<form class="form-inline my-2 my-lg-0" action="InfoPartidosServlet">
-												<img class="imgRedonda" align="middle" src="https://image.shutterstock.com/image-photo/raising-hands-participation-600w-676447282.jpg">
+												<img class="imgRedonda" align="middle" src="${partidoi.logo}">
 												<input type="hidden" name="infoPartido" value="${partidoi.id}" />
 												<button type="submit" name="button${partidoi.id}"
 													class="btn btn-outline-dark btn-lg btn-block">Información</button>
