@@ -11,11 +11,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-6">
-				<img width="500" height="300"
-					src="https://image.shutterstock.com/image-photo/raising-hands-participation-600w-676447282.jpg">
-			</div>
-			<div class="col-6">
+			<div class="col-12">
 
 				<h2>${ley.nombre}</h2>
 			
@@ -24,7 +20,7 @@
 			</div>
 
 		</div>
-		<p>${ley.descripcion}</p>
-		<p>PONER NUEVO ATRIBUTO DE LEY QUE SEA "FOTO" O ALGO ASÍ. lA IMAGEN QUE SE MUESTRE SEA SACADA DE LA BBDD.</p>
+		<br><p>${ley.descripcion}</p>
+		
 	</div>
 </body>

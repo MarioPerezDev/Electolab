@@ -10,7 +10,7 @@
 	<div class="container">
 		<h1>${active}</h1>
 		<div class="row">
-			<div class="col-12 col-md-6 text-center">
+			<div class="col-12 col-md-6">
 				<h4>Somos un grupo de estudiantes de la Escuela Técnica
 					Superior de Ingenieros de Telecomunicación de la Universidad
 					Politécnica de Madrid. 

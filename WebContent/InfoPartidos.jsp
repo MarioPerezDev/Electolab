@@ -23,7 +23,10 @@
 			</div>
 
 		</div>
-		<p>${partido.descripcion}</p>
+		<br><p>${partido.descripcion}</p>
 		
+		<footer>
+		<p>Si desea obtener cualquier tipo de información adicional acceda a la página web oficial del partido a través de este enlace:</p>
+		</footer>
 	</div>
 </body>
