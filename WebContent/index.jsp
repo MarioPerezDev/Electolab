@@ -18,7 +18,7 @@
 					src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/53646143_948372078693647_5977699288883396608_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_ohc=Obcuqk_rV9gAX8uNnfj&_nc_ht=scontent-mad1-1.xx&oh=90e8d997da3dc17608e76596495ecdcf&oe=5EB8BE33"></h1>
         </div>
         <div class="col-12 col-md-6">
-          <h1 class="text-center">Bienvenido a Electolab 2.0!</h1>
+          <h1 class="text-center">¡Bienvenido a Electolab 2.0!</h1>
           <h4><p>Electolab 2.0 permite que relacionar a personas sin conocimientos extensos de política puedan acceder a diferente información y predicciones 
           y opiniones de analistas expertos en el tema. De esta forma cualquier analista puede compartir sus estimaciones sobre determinadas leyes y mostrarlas 
           a los demás usuarios, mientras éstos pueden valorar positiva o negativamente cada predicción.</p></h4>

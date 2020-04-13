@@ -17,7 +17,7 @@
 			</div>
 			<div class="col-6">
 
-				<h2>Información del ${partido.nombre}</h2>
+				<h2>${partido.nombre}</h2>
 
 				
 			</div>

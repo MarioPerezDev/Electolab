@@ -27,7 +27,7 @@
 							<td><c:forEach items="${partidos}" var="partidoi">
 									<c:if test="${partidoi.id <= 12 || partdidoi.id > 1}">
 										<div>
-											<a href="InfoPartidosServlet"><div align=center>${partidoi.siglas}</div></a>
+											<a href="InfoPartidosServlet?infoPartido=${partidoi.id}"><div align=center>${partidoi.siglas}</div></a>
 											<div class="text-center">
 												<form class="form-inline my-2 my-lg-0" action="InfoPartidosServlet">
 													<img class="imgRedonda" align="middle" src="${partidoi.logo}">
