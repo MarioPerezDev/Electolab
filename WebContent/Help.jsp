@@ -14,25 +14,25 @@
 				<div class="row">
 				  <div class="col-4">
 				    <div class="list-group" id="list-tab" role="tablist">
-				      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Inicio</a>
-				      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Información</a>
-				      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Predicciones</a>
-				      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Perfil</a>
-				      <a class="list-group-item list-group-item-action" id="list-contacts-list" data-toggle="list" href="#list-contacts" role="tab" aria-controls="contacts">Contacto</a>
+				      <a class="list-group-item list-group-item-action active list-group-item-secondary" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Inicio</a>
+				      <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Información</a>
+				      <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Predicciones</a>
+				      <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Perfil</a>
+				      <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-contacts-list" data-toggle="list" href="#list-contacts" role="tab" aria-controls="contacts">Contacto</a>
 				    </div>
 				  </div>
 				  <div class="col-8">
 				    <div class="tab-content" id="nav-tabContent">
-				      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+				      <div class="tab-pane fade show active text-justify" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
 				      	Esta página puede ser usada como Usuario sin loggear,
 						Usuario y Analista. Para registrarse, seleccione "Entrar ->
 						Registrarse" y cree su cuenta, seleccionando la pestaña de
 						analista si procede.</div>
-				      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+				      <div class="tab-pane fade text-justify" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 				      	Si quieres buscar información, accede en la barra de
 						navegación a "Información" y podrás ver la información completa.
 						En esta sección no es necesario estar loggeado en la página.</div>
-				      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+				      <div class="tab-pane fade text-justify" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
 				      	Si quieres observar diferentes predicciones realizadas por analistas debes estar loggeado. Posteriormente, accede a
 						"Predicciones" Saldrá un listado de las predicciones realizadas
 						hasta el momento. Puede acceder a cualquiera de ellas y valorarlas
@@ -42,18 +42,18 @@
       								<div class="col-4">
     									<div class="list-group" id="list-tab" role="tablist">
 	      									<ul class="list-group">
-											  <li class="list-group-item"><a class="list-group-item list-group-item-action" id="list-usuario-list" data-toggle="list" href="#list-usuario" role="tab" aria-controls="usuario">Usuario</a></li>
-											  <li class="list-group-item"><a class="list-group-item list-group-item-action" id="list-analista-list" data-toggle="list" href="#list-analista" role="tab" aria-controls="analista">Analista</a></li>
+											  <li class="list-group-item-secondary"><a class="list-group-item list-group-item-action list-group-item-secondary" id="list-usuario-list" data-toggle="list" href="#list-usuario" role="tab" aria-controls="usuario">Usuario</a></li>
+											  <li class="list-group-item-secondary"><a class="list-group-item list-group-item-action list-group-item-secondary" id="list-analista-list" data-toggle="list" href="#list-analista" role="tab" aria-controls="analista">Analista</a></li>
 											</ul>
 										</div>
 									</div>
 										<div class="col-6">
-											<div class="tab-content" id="nav-tabContent">
-												<div class="tab-pane fade show" id="list-usuario" role="tabpanel" aria-labelledby="list-usuario-list">
+											<div class="tab-content " id="nav-tabContent">
+												<div class="tab-pane fade show text-justify" id="list-usuario" role="tabpanel" aria-labelledby="list-usuario-list">
 												Siendo usuario las opciones que tiene en la página web, es la observación de las diferentes predicciónes
 												realizadas por los analistas, incluso pudiendo dar like a la predicción visualizada. Además puede acceder a 
 												a cualquier tipo de información relacionada con los partidos políticos y las leyes votadas en el Pleno. </div>
-												<div class="tab-pane fade show" id="list-analista" role="tabpanel" aria-labelledby="list-analista-list">
+												<div class="tab-pane fade show text-justify" id="list-analista" role="tabpanel" aria-labelledby="list-analista-list">
 												Siendo analista, además de todas las posibilidades y opciones que tiene el usuario, puede realizar 
 												una serie de predicciones. Si quiere realizar una predicción acceda a
 												su cuenta de analista y seleccione "Crear Predicción". A

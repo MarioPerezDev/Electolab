@@ -8,12 +8,12 @@
 <body>
 	<%@ include file="Navbar.jsp"%>
 	<div class="container">
-		<h1>${active}</h1>
+		<h1>¿Quiénes somos?</h1>
 		<div class="row">
-			<div class="col-12 col-md-6">
+			<div class="col-12 col-md-6 text-justify">
 				<h4>Somos un grupo de estudiantes de la Escuela Técnica
 					Superior de Ingenieros de Telecomunicación de la Universidad
-					Politécnica de Madrid. 
+					Politécnica de Madrid del campus de CIU. 
 				
 					<p>Con este proyecto Web lo que tratamos es de
 					aportar nuestro grano de arena para que cualquier usuario corriente

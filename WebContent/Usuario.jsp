@@ -8,7 +8,7 @@
 <body>
 	<%@ include file="Navbar.jsp"%>
 	<div class="container">
-		<h1>Esta será la página de ${usuario.id}.</h1>
+		<h1>Esta será la página de ${usuario.name}.</h1>
 
 	</div>
 	<%@ include file="Variables.jsp"%>

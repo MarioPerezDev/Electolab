@@ -175,10 +175,43 @@ a:hover {
 }
 
 .imgRedonda {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    display: block;
-  	margin-left: auto;
-  	margin-right: auto;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.singleLey {
+	margin: 10px;
+	border: 2px solid #343a40;
+	font-size: 1.1em;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.83);
+}
+
+.partido {
+	margin: 5px;
+	min-height:95px;
+}
+
+.partido img {
+	-webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+	box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+.columna{
+	border-top: 1px solid grey !important;
+}
+.descripcionPartido{
+	margin-top:15px;
+}
+
+.imagenPartido img{
+	width:300px;
+	height: 200px;
+	margin:20px;
 }

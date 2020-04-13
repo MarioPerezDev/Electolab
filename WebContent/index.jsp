@@ -19,16 +19,16 @@
         </div>
         <div class="col-12 col-md-6">
           <h1 class="text-center">¡Bienvenido a Electolab 2.0!</h1>
-          <h4><p>Electolab 2.0 permite que relacionar a personas sin conocimientos extensos de política puedan acceder a diferente información y predicciones 
+          <h4 class="text-justify">Electolab 2.0 permite que relacionar a personas sin conocimientos extensos de política puedan acceder a diferente información y predicciones 
           y opiniones de analistas expertos en el tema. De esta forma cualquier analista puede compartir sus estimaciones sobre determinadas leyes y mostrarlas 
-          a los demás usuarios, mientras éstos pueden valorar positiva o negativamente cada predicción.</p></h4>
+          a los demás usuarios, mientras éstos pueden valorar positiva o negativamente cada predicción.</h4>
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-md-6">
           <h1 class="text-center">Para empezar</h1>
-          <h4><p>En la barra de navegación superior puede acceder al apartado que prefiera.
-          Para cualquier duda o ayuda que necesite, acceda a la pestaña de "Ayuda"</p></h4>
+          <h4 class="text-justify">En la barra de navegación superior puede acceder al apartado que prefiera.
+          Para cualquier duda o ayuda que necesite, acceda a la pestaña de "Ayuda"</h4>
         </div>
         <div class="col-12 col-md-6 text-center">
           <img width="300" height="300"

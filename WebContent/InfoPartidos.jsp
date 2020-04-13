@@ -11,21 +11,20 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-6">
-				<img width="500" height="300"
-					src="${partido.logo}">
+			<div class="col-4 imagenPartido">
+				<img src="${partido.logo}">
 			</div>
-			<div class="col-6">
-
+			<div class="col-8 descripcionPartido">
+		
 				<h2>${partido.nombre}</h2>
-
+				<div class="text-justify">${partido.descripcion}</div>
 				
 			</div>
 
 		</div>
-		<br><p>${partido.descripcion}</p>
-		
+		<br>
 		<footer>
+		<br>
 		<p>Si desea obtener cualquier tipo de información adicional acceda a la página web oficial del partido a través de este enlace:</p>
 		</footer>
 	</div>
