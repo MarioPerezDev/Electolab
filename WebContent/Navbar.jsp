@@ -58,7 +58,7 @@
 		</ul>
 		<c:choose>
 			<c:when test="${ null != usuario}">
-				<a id="texto" href="NavigationServlet?infoLink=Usuario" class="usernameText">${usuario.name}</a>
+				<a id="texto" href="UserPaginationServlet?userId=${usuario.id}" class="usernameText">${usuario.name}</a>
 				<form action="LogoutServlet">
 					<button type="submit" class="btn btn-outline-light btn-sm">Salir</button>
 				</form>

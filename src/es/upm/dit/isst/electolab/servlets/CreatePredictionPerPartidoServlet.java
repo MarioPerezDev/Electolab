@@ -44,6 +44,7 @@ public class CreatePredictionPerPartidoServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getSession().removeAttribute("typeOfPrediction");
+		req.getSession().removeAttribute("templeyes");
 		Usuario usuarioQueCrea = UsuarioDAOImplementation.getInstance().read(Integer.parseInt(req.getParameter("ownUserId")));
 		Ley ley = LeyDAOImplementation.getInstance().read(Integer.parseInt(req.getParameter("leyId")));
 
@@ -57,7 +58,7 @@ public class CreatePredictionPerPartidoServlet extends HttpServlet {
 		prediccion.setLey(ley);
 		prediccion.setAnalista(usuarioQueCrea);
 		PrediccionDAOImplementation.getInstance().create(prediccion);
-
+		
 
 
 		int votosFavor = 0;

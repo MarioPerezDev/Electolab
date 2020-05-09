@@ -13,13 +13,13 @@
 		<h1>Introduzca los datos para crear una predicción</h1>
 		<div class="row">
 			<div class="col-9">
-				<c:if test="${usuario.analist and usuario.accepted}">
+				<c:if test="${(usuario.analist and usuario.accepted) or admin == true}">
 					<c:if test="${typeOfPrediction == null}">
-						<Form  action="TypeSelectionServlet">
+						<Form action="TypeSelectionServlet">
 							<select name="eleccion" class="form-control typeSelection">
-								<option  value="perGrupo">Por grupo</option>
-								<option  value="perPartido">Por partido</option>
-								<option  value="perDiputado">Por diputado</option>
+								<option value="perGrupo">Por grupo</option>
+								<option value="perPartido">Por partido</option>
+								<option value="perDiputado">Por diputado</option>
 							</select>
 							<button type="submit" class="btn btn-outline-dark btn-sm">Elegir
 								tipo</button>

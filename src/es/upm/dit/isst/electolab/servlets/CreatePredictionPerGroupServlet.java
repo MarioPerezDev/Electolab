@@ -43,13 +43,13 @@ public class CreatePredictionPerGroupServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getSession().removeAttribute("typeOfPrediction");
+		req.getSession().removeAttribute("templeyes");
 		Usuario usuarioQueCrea = UsuarioDAOImplementation.getInstance().read(Integer.parseInt(req.getParameter("ownUserId")));
 		Ley ley = LeyDAOImplementation.getInstance().read(Integer.parseInt(req.getParameter("leyId")));
 
 
 		DateFormat dateFormat = new SimpleDateFormat("HH:mm dd/MM/yyyy");
 		Date date = new Date();
-		System.out.println(dateFormat.format(date)); //2016/11/16 12:08:43
 
 		Prediccion prediccion = new Prediccion();
 		prediccion.setFecha(dateFormat.format(date));
@@ -90,7 +90,7 @@ public class CreatePredictionPerGroupServlet extends HttpServlet {
 		votos.put("abstenciones",abstenciones);	
 		
 		req.getSession().setAttribute("predicciones",PrediccionDAOImplementation.getInstance().readAll());
-		req.getSession().setAttribute("currentPrediction", prediccion);
+		req.getSession().setAttribute("currentPrediction", PrediccionDAOImplementation.getInstance().read(prediccion.getId()));
 		req.getSession().setAttribute("currentPredictionVotos", votos);
 		getServletContext().getRequestDispatcher("/Prediccion.jsp").forward(req,resp);
 	}

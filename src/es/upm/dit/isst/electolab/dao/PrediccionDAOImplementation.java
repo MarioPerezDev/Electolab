@@ -1,12 +1,8 @@
 package es.upm.dit.isst.electolab.dao;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-
-import javax.persistence.Query;
 
 import org.hibernate.Session;
 
@@ -71,7 +67,8 @@ public class PrediccionDAOImplementation implements PrediccionDAO {
 	public Collection<Prediccion> readAll(){
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
-		List<Prediccion> prediccions = session.createQuery("from Prediccion").list();	
+		List<Prediccion> prediccions = session.createQuery("from Prediccion").list();
+		Collections.reverse(prediccions);
 		session.getTransaction().commit();
 		session.close();
 		return prediccions;

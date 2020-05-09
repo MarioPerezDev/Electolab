@@ -68,7 +68,7 @@ public class PredictionServlet extends HttpServlet {
 					}
 		        }	
 		}
-		if(!currentPrediction.getVotacionesGrupo().isEmpty()) {
+		if(!currentPrediction.getVotacionesDiputado().isEmpty()) {
 			List<VotacionPorDiputado> votaciones = (List<VotacionPorDiputado>) currentPrediction.getVotacionesDiputado();
 			 for (VotacionPorDiputado votacion : votaciones) {
 				 if(votacion.getVoto().equals("favor")) {
@@ -80,7 +80,12 @@ public class PredictionServlet extends HttpServlet {
 					if(votacion.getVoto().equals("abstencion")) {
 						abstenciones++;
 					}
-		        }	
+		        }
+			 int step = votaciones.size()/350;
+			 votosFavor= votosFavor/step;
+			 votosContra= votosContra/step;
+			 abstenciones= abstenciones/step;
+			 req.getSession().setAttribute("step", step);
 		}
 				
 		HashMap<String, Integer> votos = new HashMap<String, Integer>();

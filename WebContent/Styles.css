@@ -68,7 +68,7 @@ a:hover {
 }
 
 .likeform {
-	float: right;
+	display: inline-block;
 }
 
 .predictionZone {
@@ -214,4 +214,8 @@ a:hover {
 	width:300px;
 	height: 200px;
 	margin:20px;
+}
+
+.analistClick{
+	margin-left:20px;
 }

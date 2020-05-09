@@ -12,9 +12,12 @@
 	<div class="container">
 		<h1>Predicciones registradas</h1>
 		<c:choose>
-			<c:when test="${usuario != null}">
-				<div class="row">
-					<div class="col-9">
+			<c:when test="${usuario != null or admin== true}">
+				<div class="row text-justify">
+					<div class="col-12 col-md-9">
+						<c:if test="${mensaje != null}">
+							<div class="alert alert-danger" role="alert">${mensaje}</div>
+						</c:if>
 						<c:forEach items="${prediccionesPag}" var="prediccioni">
 							<div class="predictionZone">
 								<a href="PredictionServlet?prediction=${prediccioni.id}">
@@ -31,6 +34,7 @@
 									[Por Diputado]
 								</c:when>
 								</c:choose>
+								<br>
 								<Form class="likeform" action="dislikeServlet">
 									<input type="hidden" name="userId" value="${usuario.id}" /> <input
 										type="hidden" name="predictionId" value="${prediccioni.id}" />

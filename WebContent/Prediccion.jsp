@@ -30,9 +30,9 @@
 						</c:forEach>
 					</c:if>
 					<c:if test="${ null != currentPrediction.votacionesDiputado}">
-						<c:forEach items="${currentPrediction.votacionesDiputado}"
-							var="votacioni" varStatus="loop">
-							<li>Voto de ${votacioni.diputado.nombre} : ${votacioni.voto}</li>
+						<c:forEach items="${currentPrediction.votacionesDiputado}" step="${step}"
+							var="votacioni">
+							<li>Voto de ${votacioni.diputado.nombre} ${votacioni.diputado.apellido1} ${votacioni.diputado.apellido2}: ${votacioni.voto}</li>
 						</c:forEach>
 					</c:if>
 				</ul>

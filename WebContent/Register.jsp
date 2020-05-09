@@ -12,8 +12,7 @@
 	<div class="container">
 		<h2>Introduzca sus datos para el registro</h2>
 		<c:if test="${mensaje != null}">
-			<div class="alert alert-danger" role="alert">
-			${mensaje}</div>
+			<div class="alert alert-danger" role="alert">${mensaje}</div>
 		</c:if>
 		<form action="FormRegisterServlet">
 			<div class="form-group">
@@ -34,11 +33,13 @@
 					type="password" class="form-control" name="password2"
 					id="passwordinput2" placeholder="Repita su contraseña">
 			</div>
-			<input class="form-check-input" type="checkbox" name="analistcheck"
-				id="analistcheck" value="isAnalist"> <label
-				class="form-check-label" for="analistcheck"> Soy analista </label> <input
-				type="submit" value="Registrarse" name="registerButton"
-				class="btn btn-primary">
+			<div class="analistClick">
+				<input class="form-check-input" type="checkbox" name="analistcheck"
+					id="analistcheck" value="isAnalist"> <label
+					class="form-check-label" for="analistcheck"> Soy analista </label>
+				<input type="submit" value="Registrarse" name="registerButton"
+					class="btn btn-outline-dark">
+			</div>
 		</form>
 	</div>
 	<!-- Optional JavaScript -->

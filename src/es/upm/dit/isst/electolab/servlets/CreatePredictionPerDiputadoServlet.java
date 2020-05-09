@@ -14,11 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.electolab.dao.DiputadoDAOImplementation;
+import es.upm.dit.isst.electolab.dao.GrupoParlamentarioDAOImplementation;
 import es.upm.dit.isst.electolab.dao.LeyDAOImplementation;
 import es.upm.dit.isst.electolab.dao.PrediccionDAOImplementation;
 import es.upm.dit.isst.electolab.dao.UsuarioDAOImplementation;
 import es.upm.dit.isst.electolab.dao.VotacionPorDiputadoDAOImplementation;
+import es.upm.dit.isst.electolab.dao.VotacionPorGrupoDAOImplementation;
 import es.upm.dit.isst.electolab.model.Diputado;
+import es.upm.dit.isst.electolab.model.GrupoParlamentario;
 import es.upm.dit.isst.electolab.model.Ley;
 import es.upm.dit.isst.electolab.model.Prediccion;
 import es.upm.dit.isst.electolab.model.Usuario;
@@ -44,6 +47,7 @@ public class CreatePredictionPerDiputadoServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getSession().removeAttribute("typeOfPrediction");
+		req.getSession().removeAttribute("templeyes");
 		Usuario usuarioQueCrea = UsuarioDAOImplementation.getInstance().read(Integer.parseInt(req.getParameter("ownUserId")));
 		Ley ley = LeyDAOImplementation.getInstance().read(Integer.parseInt(req.getParameter("leyId")));
 
@@ -57,7 +61,6 @@ public class CreatePredictionPerDiputadoServlet extends HttpServlet {
 		prediccion.setAnalista(usuarioQueCrea);
 		PrediccionDAOImplementation.getInstance().create(prediccion);
 
-
 		//Calculo de votos
 
 		int votosFavor = 0;
@@ -67,6 +70,7 @@ public class CreatePredictionPerDiputadoServlet extends HttpServlet {
 		for(int i= 1; i<DiputadoDAOImplementation.getInstance().readAll().size()+1; i++) {
 			String voto = req.getParameter("voto"+Integer.toString(i));
 			Diputado diputado = DiputadoDAOImplementation.getInstance().read(i);
+
 			if(voto.equals("favor")) {
 				votosFavor++;
 			}
@@ -82,21 +86,17 @@ public class CreatePredictionPerDiputadoServlet extends HttpServlet {
 			votacionpordiputado.setVoto(voto);
 			votacionpordiputado.setPrediccion(PrediccionDAOImplementation.getInstance().read(prediccion.getId()));
 			VotacionPorDiputadoDAOImplementation.getInstance().create(votacionpordiputado);
-
-
 		}		
 
 		HashMap<String, Integer> votos = new HashMap<String, Integer>();
 		votos.put("favor",votosFavor);	
 		votos.put("contra",votosContra);	
 		votos.put("abstenciones",abstenciones);	
-
+		
 		req.getSession().setAttribute("predicciones",PrediccionDAOImplementation.getInstance().readAll());
-		req.getSession().setAttribute("currentPrediction", prediccion);
-
+		req.getSession().setAttribute("currentPrediction", PrediccionDAOImplementation.getInstance().read(prediccion.getId()));
 		req.getSession().setAttribute("currentPredictionVotos", votos);
-
-		getServletContext().getRequestDispatcher("/Prediccion.jsp").forward(req,resp);
+		getServletContext().getRequestDispatcher("/Predicciones.jsp").forward(req,resp);
 	}
 
 
